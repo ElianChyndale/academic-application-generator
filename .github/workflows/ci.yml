@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.11", "3.12"]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install
+        run: python -m pip install -e ".[dev]"
+      - name: Regenerate fixtures and schemas
+        run: |
+          python scripts/generate_fixtures.py
+          python scripts/generate_schemas.py
+      - name: Test
+        run: python -m pytest
+      - name: Lint
+        run: python -m ruff check src tests scripts
+      - name: Type check
+        run: python -m mypy src/academic_application_generator
+      - name: Validate public input
+        run: academic-application validate fixtures/profile/
+      - name: Generate material
+        run: academic-application generate --profile fixtures/profile --programmes fixtures/programmes --output generated/v0.1
+      - name: Audit material
+        run: academic-application audit --materials generated/v0.1/materials.jsonl
+      - name: Build reports
+        run: academic-application report --output reports/v0.1
+      - name: Export sample
+        run: academic-application export --kind academic-cv --programme ucd --output exports/
+      - name: Verify deterministic tracked output
+        shell: bash
+        run: git diff --exit-code
+      - name: Build wheel
+        run: python -m build
