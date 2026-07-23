@@ -1,0 +1,455 @@
+{
+  "architecture_edges": [
+    {
+      "label": "extract",
+      "source": "documents",
+      "target": "docintel"
+    },
+    {
+      "label": "index",
+      "source": "docintel",
+      "target": "retrieval"
+    },
+    {
+      "label": "ground",
+      "source": "retrieval",
+      "target": "citation"
+    },
+    {
+      "label": "inform scenario",
+      "source": "citation",
+      "target": "valuation"
+    }
+  ],
+  "architecture_nodes": [
+    {
+      "label": "Synthetic documents",
+      "node_id": "documents",
+      "role": "Input evidence"
+    },
+    {
+      "label": "PDF Manager support",
+      "node_id": "docintel",
+      "role": "Extraction and provenance"
+    },
+    {
+      "label": "Retrieval evaluation",
+      "node_id": "retrieval",
+      "role": "Evidence selection"
+    },
+    {
+      "label": "Citation checks",
+      "node_id": "citation",
+      "role": "Grounding assessment"
+    },
+    {
+      "label": "Valuation sensitivity",
+      "node_id": "valuation",
+      "role": "Scenario output"
+    }
+  ],
+  "claims": [
+    {
+      "approved_text": "A deterministic local fixture contains 60 documents and 60 questions with BM25, dense, hybrid, and KG-assisted rankings.",
+      "category": "retrieval",
+      "claim_id": "ecoquant-retrieval",
+      "evidence_ids": [
+        "ecoquant-retrieval-result"
+      ],
+      "limitations": [
+        "The fixture is synthetic and not an external benchmark."
+      ],
+      "numeric_assertions": [
+        {
+          "evidence_id": "ecoquant-retrieval-result",
+          "meaning": "fixture document and question counts",
+          "token": "60"
+        }
+      ],
+      "prohibited_expansions": [
+        "state-of-the-art retrieval",
+        "real-market performance"
+      ],
+      "state": "experimentally-supported",
+      "title": "Deterministic retrieval comparison"
+    },
+    {
+      "approved_text": "The local citation artifact covers 60 examples and 240 judgements, recording faithfulness 0.8479 and unsupported rate 0.0833.",
+      "category": "grounding",
+      "claim_id": "ecoquant-citations",
+      "evidence_ids": [
+        "ecoquant-citation-result"
+      ],
+      "limitations": [
+        "The values are aggregate synthetic-fixture observations."
+      ],
+      "numeric_assertions": [
+        {
+          "evidence_id": "ecoquant-citation-result",
+          "meaning": "evaluated examples",
+          "token": "60"
+        },
+        {
+          "evidence_id": "ecoquant-citation-result",
+          "meaning": "recorded judgements",
+          "token": "240"
+        },
+        {
+          "evidence_id": "ecoquant-citation-result",
+          "meaning": "fixture faithfulness",
+          "token": "0.8479"
+        },
+        {
+          "evidence_id": "ecoquant-citation-result",
+          "meaning": "fixture unsupported rate",
+          "token": "0.0833"
+        }
+      ],
+      "prohibited_expansions": [
+        "eliminates hallucinations",
+        "externally validated"
+      ],
+      "state": "experimentally-supported",
+      "title": "Scoped citation evaluation"
+    },
+    {
+      "approved_text": "The valuation script produces deterministic spread and price sensitivity scenarios and passed the targeted research test layer.",
+      "category": "financial-ai",
+      "claim_id": "ecoquant-valuation",
+      "evidence_ids": [
+        "ecoquant-valuation-code",
+        "ecoquant-valuation-result",
+        "ecoquant-research-test"
+      ],
+      "limitations": [
+        "Scenarios are model fixtures rather than market forecasts."
+      ],
+      "numeric_assertions": [],
+      "prohibited_expansions": [
+        "investment-grade valuation",
+        "market-validated price"
+      ],
+      "state": "validated",
+      "title": "Valuation-sensitivity workflow"
+    },
+    {
+      "approved_text": "A bounded PDF Manager support flow creates structured evidence from a synthetic document and passed its targeted test.",
+      "category": "document-intelligence",
+      "claim_id": "ecoquant-docintel",
+      "evidence_ids": [
+        "ecoquant-docintel-code",
+        "ecoquant-docintel-result",
+        "ecoquant-docintel-test"
+      ],
+      "limitations": [
+        "The source document is synthetic and the flow is a support fixture."
+      ],
+      "numeric_assertions": [],
+      "prohibited_expansions": [
+        "PDF Manager is a fifth flagship",
+        "universal PDF accuracy"
+      ],
+      "state": "validated",
+      "title": "PDF Manager supporting evidence flow"
+    },
+    {
+      "approved_text": "The repository contains prototype interfaces for external-model and API integration, but their live behavior is not verified here.",
+      "category": "integration",
+      "claim_id": "ecoquant-live-integration",
+      "evidence_ids": [
+        "ecoquant-agent-code",
+        "ecoquant-api-code"
+      ],
+      "limitations": [
+        "No live model, chain, transaction, or deployment was tested."
+      ],
+      "numeric_assertions": [],
+      "prohibited_expansions": [
+        "production-ready",
+        "deployed on-chain"
+      ],
+      "state": "prototype-only",
+      "title": "External model and chain integration"
+    },
+    {
+      "approved_text": "Planned: evaluate the evidence and valuation workflow on licensed public documents and independently review the resulting claims.",
+      "category": "future-work",
+      "claim_id": "ecoquant-external-validation",
+      "evidence_ids": [
+        "ecoquant-future-plan"
+      ],
+      "limitations": [
+        "No external validation result exists in this release."
+      ],
+      "numeric_assertions": [],
+      "prohibited_expansions": [
+        "completed external study",
+        "validated credit model"
+      ],
+      "state": "planned",
+      "title": "External validation"
+    }
+  ],
+  "demo_steps": [
+    "Open the frozen source-evidence matrix and explain the five claim states.",
+    "Inspect the synthetic retrieval and citation result artifacts.",
+    "Trace the PDF Manager support claim from source code to its targeted test.",
+    "Close with the live-integration and external-validation limitations."
+  ],
+  "evidence": [
+    {
+      "evidence_id": "ecoquant-readme",
+      "kind": "technical-report",
+      "limitation": "Project overview contains broader prototype descriptions; it is not independent validation.",
+      "project_id": "ecoquant",
+      "scope": "workspace-implementation-evidence",
+      "source_path": "README.md",
+      "source_sha256": "53f44755c92a84c4dfe4db4b30053ec0367ab36ca442f8e546415e825deec02f",
+      "synthetic": false,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ecoquant-retrieval-result",
+      "kind": "experiment-result",
+      "limitation": "Deterministic local fixture, not an external retrieval benchmark.",
+      "project_id": "ecoquant",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "research/results/retrieval_eval_summary.json",
+      "source_sha256": "3710b9290db14e1bdd10c383913f780bad194ff763d8b6e3d7ce1637dc900294",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ecoquant-citation-result",
+      "kind": "experiment-result",
+      "limitation": "Aggregate local fixture; no method-specific causal attribution.",
+      "project_id": "ecoquant",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "research/results/citation_faithfulness_summary.json",
+      "source_sha256": "186dd2342b2afeaf4e5edd60b69e2763ccd44f7a6d1ceb3635c4fca9ecd63c9b",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ecoquant-valuation-result",
+      "kind": "experiment-result",
+      "limitation": "Scenario values are synthetic and are not observed market estimates.",
+      "project_id": "ecoquant",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "research/results/valuation_sensitivity.csv",
+      "source_sha256": "7c8c23f365ff0aff7d500b4e30e5ef3ae8b73ac28b7423488c7a60009b5fd882",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ecoquant-docintel-result",
+      "kind": "experiment-result",
+      "limitation": "Synthetic extracted evidence, not a public document corpus.",
+      "project_id": "ecoquant",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "research/results/docintel_sample_evidence.jsonl",
+      "source_sha256": "8d3de4e410938a63ea680c48061d5e2281bf357c225b30f51264d84a73d369d1",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ecoquant-research-test",
+      "kind": "test",
+      "limitation": "Covers the research scripts, not the full application stack.",
+      "project_id": "ecoquant",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "research/tests/test_research_scripts.py",
+      "source_sha256": "0fca7199387d7a4a66de79fa7ea5a58d8504dab5fe904622db4b59f17abb5a8f",
+      "synthetic": true,
+      "verification_run_id": "ecoquant-research-tests"
+    },
+    {
+      "evidence_id": "ecoquant-docintel-test",
+      "kind": "test",
+      "limitation": "Covers the bounded sample flow only.",
+      "project_id": "ecoquant",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "research/tests/test_docintel_sample_flow.py",
+      "source_sha256": "ccccf37ca5efab8326131790c0dc561cdefc03b1a7b65aa19d5718f4f6f758db",
+      "synthetic": true,
+      "verification_run_id": "ecoquant-research-tests"
+    },
+    {
+      "evidence_id": "ecoquant-valuation-code",
+      "kind": "source-code",
+      "limitation": "Local scenario implementation, not a production valuation service.",
+      "project_id": "ecoquant",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "scripts/run_valuation_sensitivity.py",
+      "source_sha256": "c8241ffb64974fcb493682704c328f726d2505a0254e103bd5ec7a7c9e19aa95",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ecoquant-docintel-code",
+      "kind": "source-code",
+      "limitation": "Support fixture integration, not an independent flagship product.",
+      "project_id": "ecoquant",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "integrations/pdf_manager/sample_docintel_flow.py",
+      "source_sha256": "528aa823dc5a9a299f9de846f297bfd48d2e622c0199b14b15aec9aff620e90d",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ecoquant-agent-code",
+      "kind": "source-code",
+      "limitation": "External-model behavior was not run by the captured research tests.",
+      "project_id": "ecoquant",
+      "scope": "workspace-implementation-evidence",
+      "source_path": "ai_agent/esg_agent.py",
+      "source_sha256": "d40d841904b46c9a264ac161b2f390747d1771cea32c66a118e419cd7a555584",
+      "synthetic": false,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ecoquant-api-code",
+      "kind": "source-code",
+      "limitation": "Interface presence does not prove a deployed or production API.",
+      "project_id": "ecoquant",
+      "scope": "workspace-implementation-evidence",
+      "source_path": "api/main.py",
+      "source_sha256": "47be118872b5428be3162d570880ca85a70b1b88a7bc75f92f9dd47e82d070ee",
+      "synthetic": false,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ecoquant-dashboard-shot",
+      "kind": "screenshot",
+      "limitation": "Screenshot demonstrates a UI state, not backend correctness.",
+      "project_id": "ecoquant",
+      "scope": "workspace-implementation-evidence",
+      "source_path": "dashboard.png",
+      "source_sha256": "f034b0b04788dbea9e53f76690372e259e1b12a073e15b71ef21d883879c5516",
+      "synthetic": false,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ecoquant-future-plan",
+      "kind": "plan",
+      "limitation": "README integration descriptions are treated as unverified future scope.",
+      "project_id": "ecoquant",
+      "scope": "workspace-implementation-evidence",
+      "source_path": "README.md",
+      "source_sha256": "53f44755c92a84c4dfe4db4b30053ec0367ab36ca442f8e546415e825deec02f",
+      "synthetic": false,
+      "verification_run_id": null
+    }
+  ],
+  "failure_cases": [
+    "A strong retrieval score on a small synthetic fixture may not transfer.",
+    "Aggregate citation metrics can hide method-specific errors.",
+    "A document extraction fixture may omit layout and OCR failures.",
+    "External model or chain interfaces may fail without their optional services."
+  ],
+  "flagship_position": 1,
+  "interview": [
+    {
+      "answer": "A deterministic local fixture contains 60 documents and 60 questions with BM25, dense, hybrid, and KG-assisted rankings. Limitation: The fixture is synthetic and not an external benchmark.",
+      "claim_ids": [
+        "ecoquant-retrieval"
+      ],
+      "question": "What evidence supports: Deterministic retrieval comparison?"
+    },
+    {
+      "answer": "The local citation artifact covers 60 examples and 240 judgements, recording faithfulness 0.8479 and unsupported rate 0.0833. Limitation: The values are aggregate synthetic-fixture observations.",
+      "claim_ids": [
+        "ecoquant-citations"
+      ],
+      "question": "What evidence supports: Scoped citation evaluation?"
+    },
+    {
+      "answer": "The valuation script produces deterministic spread and price sensitivity scenarios and passed the targeted research test layer. Limitation: Scenarios are model fixtures rather than market forecasts.",
+      "claim_ids": [
+        "ecoquant-valuation"
+      ],
+      "question": "What evidence supports: Valuation-sensitivity workflow?"
+    },
+    {
+      "answer": "A bounded PDF Manager support flow creates structured evidence from a synthetic document and passed its targeted test. Limitation: The source document is synthetic and the flow is a support fixture.",
+      "claim_ids": [
+        "ecoquant-docintel"
+      ],
+      "question": "What evidence supports: PDF Manager supporting evidence flow?"
+    },
+    {
+      "answer": "The repository contains prototype interfaces for external-model and API integration, but their live behavior is not verified here. Limitation: No live model, chain, transaction, or deployment was tested.",
+      "claim_ids": [
+        "ecoquant-live-integration"
+      ],
+      "question": "What evidence supports: External model and chain integration?"
+    },
+    {
+      "answer": "Planned: evaluate the evidence and valuation workflow on licensed public documents and independently review the resulting claims. Limitation: No external validation result exists in this release.",
+      "claim_ids": [
+        "ecoquant-external-validation"
+      ],
+      "question": "What evidence supports: External validation?"
+    },
+    {
+      "answer": "External model calls, live chains, market accuracy, production deployment, and regulatory suitability are not established.",
+      "claim_ids": [
+        "ecoquant-external-validation"
+      ],
+      "question": "What is the most important boundary of this dossier?"
+    }
+  ],
+  "limitations": [
+    "No public real-world green-finance corpus is evaluated here.",
+    "No causal credit-risk or investment-performance claim is supported.",
+    "No live chain, oracle, external model, or deployment was verified.",
+    "PDF Manager remains supporting infrastructure for EcoQuant."
+  ],
+  "narratives": [
+    {
+      "claim_ids": [
+        "ecoquant-retrieval",
+        "ecoquant-citations",
+        "ecoquant-valuation",
+        "ecoquant-docintel"
+      ],
+      "target_words": 100,
+      "text": "EcoQuant Pro explores evidence-grounded analysis for green bonds and real-world assets. The inspected research layer provides deterministic retrieval and citation evaluation, valuation-sensitivity scripts, and a PDF Manager support flow that turns a synthetic document into structured evidence. Targeted research tests passed in the captured workspace, and the checked-in result artifacts support only local fixture observations. External model calls, live chains, market accuracy, production deployment, and regulatory suitability are not established. The evidence is frozen by relative path and SHA-256, and each statement keeps a visible boundary between implementation, scoped verification, local results, prototypes, and future work."
+    },
+    {
+      "claim_ids": [
+        "ecoquant-retrieval",
+        "ecoquant-citations",
+        "ecoquant-valuation",
+        "ecoquant-docintel"
+      ],
+      "target_words": 250,
+      "text": "EcoQuant Pro explores evidence-grounded analysis for green bonds and real-world assets. Green-finance decisions combine document interpretation, provenance, risk assumptions, and price sensitivity, so unsupported claims can propagate into downstream analysis.\n\nThe inspected research layer provides deterministic retrieval and citation evaluation, valuation-sensitivity scripts, and a PDF Manager support flow that turns a synthetic document into structured evidence. The bounded evidence path runs from document support through retrieval and citations into scenario-based valuation outputs.\n\nTargeted research tests passed in the captured workspace, and the checked-in result artifacts support only local fixture observations. A no-key demo can validate the evidence flow, inspect record-level outputs, and compare scoped retrieval methods.\n\nEvidence is governed at claim level. Source files establish that a method or interface exists; passed targeted checks support only their named behavior; deterministic artifacts support only local observations. Prototype and planned items remain visibly separate. Relative paths and content hashes make the inspected snapshot reviewable without copying source code into this repository. Failure cases, missing checks, and absent screenshots stay in the record so the portfolio copy does not turn an evidence gap into a positive result. Each description points back to approved claims rather than introducing new capabilities or metrics.\n\nExternal model calls, live chains, market accuracy, production deployment, and regulatory suitability are not established."
+    },
+    {
+      "claim_ids": [
+        "ecoquant-retrieval",
+        "ecoquant-citations",
+        "ecoquant-valuation",
+        "ecoquant-docintel"
+      ],
+      "target_words": 500,
+      "text": "EcoQuant Pro explores evidence-grounded analysis for green bonds and real-world assets. Green-finance decisions combine document interpretation, provenance, risk assumptions, and price sensitivity, so unsupported claims can propagate into downstream analysis. The project is strongest when discussed as a trustworthy evaluation and financial-sensitivity prototype rather than as an automated investment or credit system.\n\nThe inspected research layer provides deterministic retrieval and citation evaluation, valuation-sensitivity scripts, and a PDF Manager support flow that turns a synthetic document into structured evidence. The bounded evidence path runs from document support through retrieval and citations into scenario-based valuation outputs.\n\nThe dossier separates implementation evidence, test evidence, and local experimental artifacts so that each statement can be traced to a specific inspected file. It also records failure cases and missing evidence instead of treating absence as success.\n\nTargeted research tests passed in the captured workspace, and the checked-in result artifacts support only local fixture observations. A no-key demo can validate the evidence flow, inspect record-level outputs, and compare scoped retrieval methods.\n\nFor an interview or research discussion, the project is presented as a bounded engineering contribution: a decision problem was translated into data structures, deterministic methods, checks, and reviewable outputs. The strongest evidence is named directly, while broader deployment or impact questions remain open.\n\nThis framing supports honest comparison across the portfolio. Source code shows what exists, targeted checks show what passed in the captured environment, and result artifacts support only the local observations stated in their scope.\n\nThe practical value of this dossier is traceability. A reviewer can move from a concise public description to a stable claim identifier, then to one or more evidence records and the frozen hash of each inspected source file. Numeric statements receive their own evidence links, which reduces the risk that a precise-looking metric is detached from its fixture or test scope. Verification commands are recorded with pass counts and limitations. A failed attempt or missing dependency is retained instead of being summarized as success. Architecture diagrams and demo steps are therefore presentation aids rather than additional proof. The dossier does not infer external impact, security, deployment quality, or user outcomes. Future evaluation should refresh source hashes, rerun the relevant checks in a declared environment, and add independent evidence only when it exists. Until then, the approved wording remains deliberately bounded to what this snapshot can support. This structure also makes later evidence refreshes explicit, comparable, and suitable for careful review.\n\nExternal model calls, live chains, market accuracy, production deployment, and regulatory suitability are not established."
+    }
+  ],
+  "project_id": "ecoquant",
+  "public_name": "EcoQuant Pro",
+  "research_question": "How can document evidence, retrieval, citation checks, and valuation sensitivity be combined without overstating synthetic results?",
+  "role": "Flagship financial AI and document-evidence system, with PDF Manager treated as supporting infrastructure.",
+  "schema_version": "0.1.0",
+  "screenshots": [
+    {
+      "available": true,
+      "evidence_id": "ecoquant-dashboard-shot",
+      "label": "Dashboard state",
+      "note": "Available workspace screenshot; visual evidence only.",
+      "screenshot_id": "ecoquant-dashboard"
+    }
+  ],
+  "summary": "EcoQuant Pro explores evidence-grounded analysis for green bonds and real-world assets."
+}

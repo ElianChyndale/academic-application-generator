@@ -1,0 +1,54 @@
+{
+  "course_code": "MSC-MAI",
+  "excluded_volatile_fields": [
+    "application deadlines",
+    "fees",
+    "contact names",
+    "scholarship values",
+    "rankings",
+    "admission likelihood"
+  ],
+  "facts": [
+    {
+      "fact_id": "galway-core-ai",
+      "fit_tags": [
+        "machine-learning",
+        "retrieval",
+        "responsible-ai",
+        "agents"
+      ],
+      "source_ids": [
+        "galway-official-course"
+      ],
+      "text": "The official curriculum combines machine learning, deep learning, natural language processing, information retrieval, AI ethics, and agent-oriented study."
+    },
+    {
+      "fact_id": "galway-knowledge-systems",
+      "fit_tags": [
+        "knowledge-graphs",
+        "research-project"
+      ],
+      "source_ids": [
+        "galway-official-course"
+      ],
+      "text": "The programme lists knowledge representation, knowledge graphs, and a substantial individual project among its current study opportunities."
+    }
+  ],
+  "institution": "University of Galway",
+  "official_sources": [
+    {
+      "kind": "official-webpage",
+      "locator": "https://www.universityofgalway.ie/courses/taught-postgraduate-courses/computer-science-artificial-intelligence.html",
+      "note": "Official programme page; curriculum may change.",
+      "sha256": null,
+      "source_id": "galway-official-course",
+      "verified_on": "2026-07-24",
+      "volatile": true
+    }
+  ],
+  "programme_id": "galway",
+  "programme_name": "MSc Computer Science—Artificial Intelligence",
+  "refresh_required": true,
+  "schema_version": "0.1.0",
+  "verified_on": "2026-07-24"
+}

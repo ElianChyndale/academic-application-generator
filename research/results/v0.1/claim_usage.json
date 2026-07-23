@@ -1,0 +1,112 @@
+[
+  {
+    "claim_id": "ai-lab-current-verification",
+    "state": "prototype-only",
+    "uses": 9
+  },
+  {
+    "claim_id": "ai-lab-reproducibility",
+    "state": "experimentally-supported",
+    "uses": 3
+  },
+  {
+    "claim_id": "ai-lab-results",
+    "state": "experimentally-supported",
+    "uses": 9
+  },
+  {
+    "claim_id": "ai-lab-runners",
+    "state": "implemented",
+    "uses": 20
+  },
+  {
+    "claim_id": "auralynq-calibration",
+    "state": "experimentally-supported",
+    "uses": 3
+  },
+  {
+    "claim_id": "auralynq-cockpit",
+    "state": "prototype-only",
+    "uses": 3
+  },
+  {
+    "claim_id": "auralynq-memory",
+    "state": "implemented",
+    "uses": 14
+  },
+  {
+    "claim_id": "auralynq-review-strategies",
+    "state": "experimentally-supported",
+    "uses": 3
+  },
+  {
+    "claim_id": "auralynq-review-validation",
+    "state": "validated",
+    "uses": 5
+  },
+  {
+    "claim_id": "auralynq-user-efficacy",
+    "state": "planned",
+    "uses": 4
+  },
+  {
+    "claim_id": "ecoquant-citations",
+    "state": "experimentally-supported",
+    "uses": 3
+  },
+  {
+    "claim_id": "ecoquant-docintel",
+    "state": "validated",
+    "uses": 20
+  },
+  {
+    "claim_id": "ecoquant-external-validation",
+    "state": "planned",
+    "uses": 4
+  },
+  {
+    "claim_id": "ecoquant-retrieval",
+    "state": "experimentally-supported",
+    "uses": 3
+  },
+  {
+    "claim_id": "ecoquant-valuation",
+    "state": "validated",
+    "uses": 20
+  },
+  {
+    "claim_id": "gbl-backend",
+    "state": "implemented",
+    "uses": 3
+  },
+  {
+    "claim_id": "gbl-contract",
+    "state": "prototype-only",
+    "uses": 8
+  },
+  {
+    "claim_id": "gbl-deployment-audit",
+    "state": "planned",
+    "uses": 4
+  },
+  {
+    "claim_id": "gbl-stress",
+    "state": "experimentally-supported",
+    "uses": 3
+  },
+  {
+    "claim_id": "gbl-threshold",
+    "state": "validated",
+    "uses": 14
+  },
+  {
+    "claim_id": "profile-research-identity",
+    "state": "profile-fact",
+    "uses": 19
+  },
+  {
+    "claim_id": "profile-technical-scope",
+    "state": "profile-fact",
+    "uses": 7
+  }
+]

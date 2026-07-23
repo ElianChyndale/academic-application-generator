@@ -1,0 +1,440 @@
+{
+  "architecture_edges": [
+    {
+      "label": "load",
+      "source": "fixtures",
+      "target": "runners"
+    },
+    {
+      "label": "compare",
+      "source": "runners",
+      "target": "baselines"
+    },
+    {
+      "label": "record",
+      "source": "baselines",
+      "target": "results"
+    },
+    {
+      "label": "interpret",
+      "source": "results",
+      "target": "reports"
+    }
+  ],
+  "architecture_nodes": [
+    {
+      "label": "Local fixtures",
+      "node_id": "fixtures",
+      "role": "Inputs"
+    },
+    {
+      "label": "Lab runners",
+      "node_id": "runners",
+      "role": "Methods"
+    },
+    {
+      "label": "Baseline comparisons",
+      "node_id": "baselines",
+      "role": "Evaluation"
+    },
+    {
+      "label": "Machine-readable results",
+      "node_id": "results",
+      "role": "Evidence"
+    },
+    {
+      "label": "Scoped reports",
+      "node_id": "reports",
+      "role": "Interpretation"
+    }
+  ],
+  "claims": [
+    {
+      "approved_text": "The repository implements independent local runners across core AI method areas and writes outputs under a shared research directory.",
+      "category": "research-engineering",
+      "claim_id": "ai-lab-runners",
+      "evidence_ids": [
+        "ai-lab-ml-code",
+        "ai-lab-retrieval-code",
+        "ai-lab-kg-code",
+        "ai-lab-agent-code",
+        "ai-lab-repro-code",
+        "ai-lab-finance-code"
+      ],
+      "limitations": [
+        "The inspected runners are small local demonstrations."
+      ],
+      "numeric_assertions": [],
+      "prohibited_expansions": [
+        "complete AI curriculum",
+        "publication-quality benchmark"
+      ],
+      "state": "implemented",
+      "title": "Deterministic lab implementations"
+    },
+    {
+      "approved_text": "Committed local artifacts record retrieval, knowledge-graph, and deterministic agent-proxy comparisons.",
+      "category": "baseline-evaluation",
+      "claim_id": "ai-lab-results",
+      "evidence_ids": [
+        "ai-lab-retrieval-result",
+        "ai-lab-kg-result",
+        "ai-lab-agent-result"
+      ],
+      "limitations": [
+        "The artifacts are local fixtures and were not freshly regenerated here."
+      ],
+      "numeric_assertions": [],
+      "prohibited_expansions": [
+        "state-of-the-art",
+        "external benchmark result",
+        "LLM agent finding"
+      ],
+      "state": "experimentally-supported",
+      "title": "Committed baseline artifacts"
+    },
+    {
+      "approved_text": "A local reproducibility configuration records 180 samples and seed 42 alongside committed check results.",
+      "category": "reproducibility",
+      "claim_id": "ai-lab-reproducibility",
+      "evidence_ids": [
+        "ai-lab-repro-config",
+        "ai-lab-repro-result"
+      ],
+      "limitations": [
+        "This is a small local configuration, not cross-infrastructure proof."
+      ],
+      "numeric_assertions": [
+        {
+          "evidence_id": "ai-lab-repro-config",
+          "meaning": "configured sample count",
+          "token": "180"
+        },
+        {
+          "evidence_id": "ai-lab-repro-config",
+          "meaning": "configured random seed",
+          "token": "42"
+        }
+      ],
+      "prohibited_expansions": [
+        "universal reproducibility",
+        "production MLOps validation"
+      ],
+      "state": "experimentally-supported",
+      "title": "Reproducibility records"
+    },
+    {
+      "approved_text": "The current aggregate test attempt is recorded as blocked by a missing plotting dependency rather than reported as passing.",
+      "category": "verification",
+      "claim_id": "ai-lab-current-verification",
+      "evidence_ids": [
+        "ai-lab-test"
+      ],
+      "limitations": [
+        "A fresh complete run is not available in this capture."
+      ],
+      "numeric_assertions": [],
+      "prohibited_expansions": [
+        "all tests pass",
+        "fully reproducible in the captured environment"
+      ],
+      "state": "prototype-only",
+      "title": "Current aggregate test attempt"
+    },
+    {
+      "approved_text": "Planned: add external datasets and predeclared comparisons only after the local dependency and rerun contract is stabilized.",
+      "category": "future-work",
+      "claim_id": "ai-lab-external-study",
+      "evidence_ids": [
+        "ai-lab-extension-plan"
+      ],
+      "limitations": [
+        "No external benchmark result is part of this release."
+      ],
+      "numeric_assertions": [],
+      "prohibited_expansions": [
+        "published study",
+        "external validation complete"
+      ],
+      "state": "planned",
+      "title": "External benchmarking"
+    }
+  ],
+  "demo_steps": [
+    "Open the skill matrix and select one bounded method area.",
+    "Trace its runner into a machine-readable local result artifact.",
+    "Inspect the reproducibility configuration and limitations.",
+    "Show the missing-dependency verification record instead of hiding it."
+  ],
+  "evidence": [
+    {
+      "evidence_id": "ai-lab-readme",
+      "kind": "technical-report",
+      "limitation": "Project overview is not independent validation.",
+      "project_id": "ai-research-engineering-lab",
+      "scope": "workspace-implementation-evidence",
+      "source_path": "README.md",
+      "source_sha256": "9bcec55968e0cc20160303bf1e914e28a1a224b8667f47e43098c8c544c04866",
+      "synthetic": false,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ai-lab-skill-matrix",
+      "kind": "technical-report",
+      "limitation": "Mapping describes intended coverage rather than module equivalence.",
+      "project_id": "ai-research-engineering-lab",
+      "scope": "workspace-implementation-evidence",
+      "source_path": "SKILL_MATRIX.md",
+      "source_sha256": "4fc7e559a934114f9fb2a7a73fd44fb0f3f1daba161b0d24cbcfd883b1128b30",
+      "synthetic": false,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ai-lab-ml-code",
+      "kind": "source-code",
+      "limitation": "Small local method demonstration.",
+      "project_id": "ai-research-engineering-lab",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "labs/01_ml_foundations/run_experiment.py",
+      "source_sha256": "3ae5cfd48c04b496c1b925e83f5f069fd06d5a9b7fbc287538d2ed14ae5a1bff",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ai-lab-retrieval-code",
+      "kind": "source-code",
+      "limitation": "Small local retrieval demonstration.",
+      "project_id": "ai-research-engineering-lab",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "labs/03_nlp_ir_rag/run_experiment.py",
+      "source_sha256": "bbeec61ae579b42857b22d793c12071f3cd956114b9afdfebf2583e77a0b9209",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ai-lab-kg-code",
+      "kind": "source-code",
+      "limitation": "Small local knowledge-graph demonstration.",
+      "project_id": "ai-research-engineering-lab",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "labs/04_knowledge_graphs/run_experiment.py",
+      "source_sha256": "538da5d155386b10e9975160573b4e2ab4fc7748d7cb0e216667927034323c9d",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ai-lab-agent-code",
+      "kind": "source-code",
+      "limitation": "Small deterministic agent/RL proxy demonstration.",
+      "project_id": "ai-research-engineering-lab",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "labs/05_agents_rl/run_experiment.py",
+      "source_sha256": "a6ef75ac84cb9a3efc99f551f1a6db0b16dfe95ae74aadf393d3625e1b0b4ef4",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ai-lab-repro-code",
+      "kind": "source-code",
+      "limitation": "Local reproducibility demonstration.",
+      "project_id": "ai-research-engineering-lab",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "labs/07_mlops_reproducibility/run_experiment.py",
+      "source_sha256": "09eaf455d68e74a47af3d818df2ff174740eda32606923384e19ca88c5a3ad79",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ai-lab-finance-code",
+      "kind": "source-code",
+      "limitation": "Local financial AI demonstration.",
+      "project_id": "ai-research-engineering-lab",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "labs/08_financial_ai/run_experiment.py",
+      "source_sha256": "5c2edc139e9c0c428613bc0225e56c9c152c81864cc2df1a4ca9b32b7d420513",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ai-lab-retrieval-result",
+      "kind": "experiment-result",
+      "limitation": "Committed local result, not freshly regenerated by this dossier capture.",
+      "project_id": "ai-research-engineering-lab",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "research/results/retrieval_comparison.csv",
+      "source_sha256": "5b0b9afa137681e81e50b5e361d830a95aef4488d6783a54ccb6b99ea97aa715",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ai-lab-kg-result",
+      "kind": "experiment-result",
+      "limitation": "Committed local result, not an external benchmark.",
+      "project_id": "ai-research-engineering-lab",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "research/results/kg_rag_comparison.csv",
+      "source_sha256": "562c0772e81448977e6c94d228529f3d1766ce48d43f83841d766f01dd498e41",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ai-lab-agent-result",
+      "kind": "experiment-result",
+      "limitation": "Deterministic proxy result, not an LLM-agent evaluation.",
+      "project_id": "ai-research-engineering-lab",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "research/results/agent_task_eval.csv",
+      "source_sha256": "a4b9a282e683da075c4fcf5d3ff1388f54029e15822266a2a88fdbedfa2e845d",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ai-lab-repro-result",
+      "kind": "experiment-result",
+      "limitation": "Committed reproducibility records.",
+      "project_id": "ai-research-engineering-lab",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "research/results/reproducibility_check_results.csv",
+      "source_sha256": "1d5815abed1002f72c1e62b06649c4a66f8691a2fa1e5b983a217cc04c2b9057",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ai-lab-repro-config",
+      "kind": "experiment-result",
+      "limitation": "Small local configuration.",
+      "project_id": "ai-research-engineering-lab",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "research/results/reproducibility_config.json",
+      "source_sha256": "0164a26bf1d322a8a83c35d9243bddeded7b20394a9a74dee02d60c47a87d797",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "ai-lab-test",
+      "kind": "test",
+      "limitation": "Current run stopped because matplotlib was missing.",
+      "project_id": "ai-research-engineering-lab",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "tests/test_labs.py",
+      "source_sha256": "170f824e101b5250f349b6599efe3ad8630e1bfb3b81eb11c07de982ff7c9043",
+      "synthetic": true,
+      "verification_run_id": "ai-lab-current-test-attempt"
+    },
+    {
+      "evidence_id": "ai-lab-extension-plan",
+      "kind": "plan",
+      "limitation": "External benchmarking and broader validation remain future work.",
+      "project_id": "ai-research-engineering-lab",
+      "scope": "workspace-implementation-evidence",
+      "source_path": "README.md",
+      "source_sha256": "9bcec55968e0cc20160303bf1e914e28a1a224b8667f47e43098c8c544c04866",
+      "synthetic": false,
+      "verification_run_id": null
+    }
+  ],
+  "failure_cases": [
+    "A missing dependency can prevent a clean rerun despite committed outputs.",
+    "Small fixtures can make weak baselines appear stronger than they are.",
+    "Agent proxies may be mistaken for real LLM-agent experiments.",
+    "Method coverage can be mistaken for complete academic-module coverage."
+  ],
+  "flagship_position": 4,
+  "interview": [
+    {
+      "answer": "The repository implements independent local runners across core AI method areas and writes outputs under a shared research directory. Limitation: The inspected runners are small local demonstrations.",
+      "claim_ids": [
+        "ai-lab-runners"
+      ],
+      "question": "What evidence supports: Deterministic lab implementations?"
+    },
+    {
+      "answer": "Committed local artifacts record retrieval, knowledge-graph, and deterministic agent-proxy comparisons. Limitation: The artifacts are local fixtures and were not freshly regenerated here.",
+      "claim_ids": [
+        "ai-lab-results"
+      ],
+      "question": "What evidence supports: Committed baseline artifacts?"
+    },
+    {
+      "answer": "A local reproducibility configuration records 180 samples and seed 42 alongside committed check results. Limitation: This is a small local configuration, not cross-infrastructure proof.",
+      "claim_ids": [
+        "ai-lab-reproducibility"
+      ],
+      "question": "What evidence supports: Reproducibility records?"
+    },
+    {
+      "answer": "The current aggregate test attempt is recorded as blocked by a missing plotting dependency rather than reported as passing. Limitation: A fresh complete run is not available in this capture.",
+      "claim_ids": [
+        "ai-lab-current-verification"
+      ],
+      "question": "What evidence supports: Current aggregate test attempt?"
+    },
+    {
+      "answer": "Planned: add external datasets and predeclared comparisons only after the local dependency and rerun contract is stabilized. Limitation: No external benchmark result is part of this release.",
+      "claim_ids": [
+        "ai-lab-external-study"
+      ],
+      "question": "What evidence supports: External benchmarking?"
+    },
+    {
+      "answer": "The labs are small method demonstrations, not external benchmarks, peer-reviewed studies, comprehensive course coverage, or fresh passing tests.",
+      "claim_ids": [
+        "ai-lab-external-study"
+      ],
+      "question": "What is the most important boundary of this dossier?"
+    }
+  ],
+  "limitations": [
+    "The current aggregate test attempt did not pass because matplotlib was absent.",
+    "Committed outputs are local fixtures, not external benchmark results.",
+    "The lab does not claim publication, novelty, or complete course equivalence.",
+    "No real deployment or large-model training is included."
+  ],
+  "narratives": [
+    {
+      "claim_ids": [
+        "ai-lab-runners",
+        "ai-lab-results",
+        "ai-lab-reproducibility",
+        "ai-lab-current-verification"
+      ],
+      "target_words": 100,
+      "text": "AI Research Engineering Lab organizes compact method demonstrations that support the portfolio's applied systems. The inspected repository contains lab runners and result artifacts for machine learning, retrieval, knowledge graphs, agents, reproducibility, and financial AI. Existing result files are inventoried as local evidence, while the current aggregate test attempt is disclosed as blocked by a missing plotting dependency. The labs are small method demonstrations, not external benchmarks, peer-reviewed studies, comprehensive course coverage, or fresh passing tests. The evidence is frozen by relative path and SHA-256, and each statement keeps a visible boundary between implementation, scoped verification, local results, prototypes, and future work."
+    },
+    {
+      "claim_ids": [
+        "ai-lab-runners",
+        "ai-lab-results",
+        "ai-lab-reproducibility",
+        "ai-lab-current-verification"
+      ],
+      "target_words": 250,
+      "text": "AI Research Engineering Lab organizes compact method demonstrations that support the portfolio's applied systems. A portfolio can name many AI techniques without showing how baselines, data, metrics, and reproducibility decisions are implemented.\n\nThe inspected repository contains lab runners and result artifacts for machine learning, retrieval, knowledge graphs, agents, reproducibility, and financial AI. Shared deterministic utilities feed independent lab runners, which write machine-readable results and scoped reports.\n\nExisting result files are inventoried as local evidence, while the current aggregate test attempt is disclosed as blocked by a missing plotting dependency. A demo should inspect one baseline comparison, one reproducibility record, and the explicitly recorded missing-dependency test outcome.\n\nEvidence is governed at claim level. Source files establish that a method or interface exists; passed targeted checks support only their named behavior; deterministic artifacts support only local observations. Prototype and planned items remain visibly separate. Relative paths and content hashes make the inspected snapshot reviewable without copying source code into this repository. Failure cases, missing checks, and absent screenshots stay in the record so the portfolio copy does not turn an evidence gap into a positive result. Each description points back to approved claims rather than introducing new capabilities or metrics.\n\nThe labs are small method demonstrations, not external benchmarks, peer-reviewed studies, comprehensive course coverage, or fresh passing tests."
+    },
+    {
+      "claim_ids": [
+        "ai-lab-runners",
+        "ai-lab-results",
+        "ai-lab-reproducibility",
+        "ai-lab-current-verification"
+      ],
+      "target_words": 500,
+      "text": "AI Research Engineering Lab organizes compact method demonstrations that support the portfolio's applied systems. A portfolio can name many AI techniques without showing how baselines, data, metrics, and reproducibility decisions are implemented. The repository's value lies in method literacy and reproducibility discipline, including honest disclosure when the current environment cannot rerun the full suite.\n\nThe inspected repository contains lab runners and result artifacts for machine learning, retrieval, knowledge graphs, agents, reproducibility, and financial AI. Shared deterministic utilities feed independent lab runners, which write machine-readable results and scoped reports.\n\nThe dossier separates implementation evidence, test evidence, and local experimental artifacts so that each statement can be traced to a specific inspected file. It also records failure cases and missing evidence instead of treating absence as success.\n\nExisting result files are inventoried as local evidence, while the current aggregate test attempt is disclosed as blocked by a missing plotting dependency. A demo should inspect one baseline comparison, one reproducibility record, and the explicitly recorded missing-dependency test outcome.\n\nFor an interview or research discussion, the project is presented as a bounded engineering contribution: a decision problem was translated into data structures, deterministic methods, checks, and reviewable outputs. The strongest evidence is named directly, while broader deployment or impact questions remain open.\n\nThis framing supports honest comparison across the portfolio. Source code shows what exists, targeted checks show what passed in the captured environment, and result artifacts support only the local observations stated in their scope.\n\nThe practical value of this dossier is traceability. A reviewer can move from a concise public description to a stable claim identifier, then to one or more evidence records and the frozen hash of each inspected source file. Numeric statements receive their own evidence links, which reduces the risk that a precise-looking metric is detached from its fixture or test scope. Verification commands are recorded with pass counts and limitations. A failed attempt or missing dependency is retained instead of being summarized as success. Architecture diagrams and demo steps are therefore presentation aids rather than additional proof. The dossier does not infer external impact, security, deployment quality, or user outcomes. Future evaluation should refresh source hashes, rerun the relevant checks in a declared environment, and add independent evidence only when it exists. Until then, the approved wording remains deliberately bounded to what this snapshot can support. This structure also makes later evidence refreshes explicit, comparable, and suitable for careful review.\n\nThe labs are small method demonstrations, not external benchmarks, peer-reviewed studies, comprehensive course coverage, or fresh passing tests."
+    }
+  ],
+  "project_id": "ai-research-engineering-lab",
+  "public_name": "AI Research Engineering Lab",
+  "research_question": "How can small deterministic experiments make core AI methods, baselines, and limitations inspectable for MSc/RA preparation?",
+  "role": "Flagship research-foundation repository for deterministic AI method labs.",
+  "schema_version": "0.1.0",
+  "screenshots": [
+    {
+      "available": false,
+      "evidence_id": null,
+      "label": "Lab output view",
+      "note": "No approved screenshot was selected; machine-readable results are used instead.",
+      "screenshot_id": "ai-lab-screenshot-missing"
+    }
+  ],
+  "summary": "AI Research Engineering Lab organizes compact method demonstrations that support the portfolio's applied systems."
+}

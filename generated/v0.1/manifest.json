@@ -1,0 +1,162 @@
+{
+  "materials": [
+    {
+      "kind": "industry-cv",
+      "material_id": "generic-industry-cv",
+      "path": "generic/INDUSTRY_CV.md",
+      "programme_id": null
+    },
+    {
+      "kind": "academic-cv",
+      "material_id": "generic-academic-cv",
+      "path": "generic/ACADEMIC_CV.md",
+      "programme_id": null
+    },
+    {
+      "kind": "project-descriptions",
+      "material_id": "generic-project-descriptions",
+      "path": "generic/PROJECT_DESCRIPTIONS.md",
+      "programme_id": null
+    },
+    {
+      "kind": "linkedin-summary",
+      "material_id": "generic-linkedin-summary",
+      "path": "generic/LINKEDIN_SUMMARY.md",
+      "programme_id": null
+    },
+    {
+      "kind": "github-profile",
+      "material_id": "generic-github-profile",
+      "path": "generic/GITHUB_PROFILE_README.md",
+      "programme_id": null
+    },
+    {
+      "kind": "website-content",
+      "material_id": "generic-website-content",
+      "path": "generic/WEBSITE_CONTENT.md",
+      "programme_id": null
+    },
+    {
+      "kind": "interview-answers",
+      "material_id": "generic-interview-answers",
+      "path": "generic/INTERVIEW_ANSWERS.md",
+      "programme_id": null
+    },
+    {
+      "kind": "recommender-brief",
+      "material_id": "generic-recommender-brief",
+      "path": "generic/RECOMMENDER_EVIDENCE_BRIEF.md",
+      "programme_id": null
+    },
+    {
+      "kind": "programme-fit",
+      "material_id": "galway-programme-fit",
+      "path": "galway/PROGRAMME_FIT.md",
+      "programme_id": "galway"
+    },
+    {
+      "kind": "sop-materials",
+      "material_id": "galway-sop-materials",
+      "path": "galway/SOP_MATERIALS.md",
+      "programme_id": "galway"
+    },
+    {
+      "kind": "personal-statement",
+      "material_id": "galway-personal-statement",
+      "path": "galway/PERSONAL_STATEMENT_MATERIALS.md",
+      "programme_id": "galway"
+    },
+    {
+      "kind": "research-interest",
+      "material_id": "galway-research-interest",
+      "path": "galway/RESEARCH_INTEREST.md",
+      "programme_id": "galway"
+    },
+    {
+      "kind": "professor-email",
+      "material_id": "galway-professor-email",
+      "path": "galway/PROFESSOR_OUTREACH_EMAIL.md",
+      "programme_id": "galway"
+    },
+    {
+      "kind": "scholarship-materials",
+      "material_id": "galway-scholarship-materials",
+      "path": "galway/SCHOLARSHIP_ESSAY_MATERIALS.md",
+      "programme_id": "galway"
+    },
+    {
+      "kind": "programme-fit",
+      "material_id": "ucd-programme-fit",
+      "path": "ucd/PROGRAMME_FIT.md",
+      "programme_id": "ucd"
+    },
+    {
+      "kind": "sop-materials",
+      "material_id": "ucd-sop-materials",
+      "path": "ucd/SOP_MATERIALS.md",
+      "programme_id": "ucd"
+    },
+    {
+      "kind": "personal-statement",
+      "material_id": "ucd-personal-statement",
+      "path": "ucd/PERSONAL_STATEMENT_MATERIALS.md",
+      "programme_id": "ucd"
+    },
+    {
+      "kind": "research-interest",
+      "material_id": "ucd-research-interest",
+      "path": "ucd/RESEARCH_INTEREST.md",
+      "programme_id": "ucd"
+    },
+    {
+      "kind": "professor-email",
+      "material_id": "ucd-professor-email",
+      "path": "ucd/PROFESSOR_OUTREACH_EMAIL.md",
+      "programme_id": "ucd"
+    },
+    {
+      "kind": "scholarship-materials",
+      "material_id": "ucd-scholarship-materials",
+      "path": "ucd/SCHOLARSHIP_ESSAY_MATERIALS.md",
+      "programme_id": "ucd"
+    },
+    {
+      "kind": "programme-fit",
+      "material_id": "ul-programme-fit",
+      "path": "ul/PROGRAMME_FIT.md",
+      "programme_id": "ul"
+    },
+    {
+      "kind": "sop-materials",
+      "material_id": "ul-sop-materials",
+      "path": "ul/SOP_MATERIALS.md",
+      "programme_id": "ul"
+    },
+    {
+      "kind": "personal-statement",
+      "material_id": "ul-personal-statement",
+      "path": "ul/PERSONAL_STATEMENT_MATERIALS.md",
+      "programme_id": "ul"
+    },
+    {
+      "kind": "research-interest",
+      "material_id": "ul-research-interest",
+      "path": "ul/RESEARCH_INTEREST.md",
+      "programme_id": "ul"
+    },
+    {
+      "kind": "professor-email",
+      "material_id": "ul-professor-email",
+      "path": "ul/PROFESSOR_OUTREACH_EMAIL.md",
+      "programme_id": "ul"
+    },
+    {
+      "kind": "scholarship-materials",
+      "material_id": "ul-scholarship-materials",
+      "path": "ul/SCHOLARSHIP_ESSAY_MATERIALS.md",
+      "programme_id": "ul"
+    }
+  ],
+  "review_status": "draft-human-verification-required",
+  "schema_version": "0.1.0"
+}

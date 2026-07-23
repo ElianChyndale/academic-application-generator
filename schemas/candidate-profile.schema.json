@@ -1,0 +1,433 @@
+{
+  "$defs": {
+    "ClaimState": {
+      "enum": [
+        "implemented",
+        "validated",
+        "experimentally-supported",
+        "prototype-only",
+        "planned",
+        "profile-fact"
+      ],
+      "title": "ClaimState",
+      "type": "string"
+    },
+    "MaterialKind": {
+      "enum": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "title": "MaterialKind",
+      "type": "string"
+    },
+    "NumericFact": {
+      "additionalProperties": false,
+      "properties": {
+        "allowed_materials": {
+          "items": {
+            "$ref": "#/$defs/MaterialKind"
+          },
+          "minItems": 1,
+          "title": "Allowed Materials",
+          "type": "array"
+        },
+        "fact_id": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "title": "Fact Id",
+          "type": "string"
+        },
+        "meaning": {
+          "minLength": 1,
+          "title": "Meaning",
+          "type": "string"
+        },
+        "source_ids": {
+          "items": {
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Ids",
+          "type": "array"
+        },
+        "token": {
+          "pattern": "^[0-9]+(?:\\.[0-9]+)?$",
+          "title": "Token",
+          "type": "string"
+        }
+      },
+      "required": [
+        "fact_id",
+        "token",
+        "meaning",
+        "source_ids",
+        "allowed_materials"
+      ],
+      "title": "NumericFact",
+      "type": "object"
+    },
+    "ProfileClaim": {
+      "additionalProperties": false,
+      "properties": {
+        "allowed_materials": {
+          "items": {
+            "$ref": "#/$defs/MaterialKind"
+          },
+          "minItems": 1,
+          "title": "Allowed Materials",
+          "type": "array"
+        },
+        "allowed_temporal_modes": {
+          "items": {
+            "$ref": "#/$defs/TemporalMode"
+          },
+          "minItems": 1,
+          "title": "Allowed Temporal Modes",
+          "type": "array"
+        },
+        "category": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "title": "Category",
+          "type": "string"
+        },
+        "claim_id": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "title": "Claim Id",
+          "type": "string"
+        },
+        "limitation": {
+          "minLength": 1,
+          "title": "Limitation",
+          "type": "string"
+        },
+        "project_id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProjectId"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source_ids": {
+          "items": {
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Ids",
+          "type": "array"
+        },
+        "state": {
+          "$ref": "#/$defs/ClaimState"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "claim_id",
+        "text",
+        "category",
+        "state",
+        "source_ids",
+        "allowed_materials",
+        "allowed_temporal_modes",
+        "limitation"
+      ],
+      "title": "ProfileClaim",
+      "type": "object"
+    },
+    "ProjectId": {
+      "enum": [
+        "ecoquant",
+        "auralynq",
+        "green-bond-lending",
+        "ai-research-engineering-lab"
+      ],
+      "title": "ProjectId",
+      "type": "string"
+    },
+    "ProjectNarrative": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_ids": {
+          "items": {
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Claim Ids",
+          "type": "array"
+        },
+        "target_words": {
+          "enum": [
+            100,
+            250,
+            500
+          ],
+          "title": "Target Words",
+          "type": "integer"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "target_words",
+        "text",
+        "claim_ids"
+      ],
+      "title": "ProjectNarrative",
+      "type": "object"
+    },
+    "ProjectRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_ids": {
+          "items": {
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "type": "string"
+          },
+          "minItems": 4,
+          "title": "Claim Ids",
+          "type": "array"
+        },
+        "flagship_position": {
+          "maximum": 4,
+          "minimum": 1,
+          "title": "Flagship Position",
+          "type": "integer"
+        },
+        "narratives": {
+          "items": {
+            "$ref": "#/$defs/ProjectNarrative"
+          },
+          "maxItems": 3,
+          "minItems": 3,
+          "title": "Narratives",
+          "type": "array"
+        },
+        "project_id": {
+          "$ref": "#/$defs/ProjectId"
+        },
+        "public_name": {
+          "minLength": 1,
+          "title": "Public Name",
+          "type": "string"
+        },
+        "role": {
+          "minLength": 1,
+          "title": "Role",
+          "type": "string"
+        }
+      },
+      "required": [
+        "project_id",
+        "public_name",
+        "flagship_position",
+        "role",
+        "claim_ids",
+        "narratives"
+      ],
+      "title": "ProjectRecord",
+      "type": "object"
+    },
+    "SourceKind": {
+      "enum": [
+        "tagged-repository",
+        "official-webpage",
+        "public-profile"
+      ],
+      "title": "SourceKind",
+      "type": "string"
+    },
+    "SourceRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "$ref": "#/$defs/SourceKind"
+        },
+        "locator": {
+          "minLength": 1,
+          "title": "Locator",
+          "type": "string"
+        },
+        "note": {
+          "minLength": 1,
+          "title": "Note",
+          "type": "string"
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sha256"
+        },
+        "source_id": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "title": "Source Id",
+          "type": "string"
+        },
+        "verified_on": {
+          "format": "date",
+          "title": "Verified On",
+          "type": "string"
+        },
+        "volatile": {
+          "title": "Volatile",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "source_id",
+        "kind",
+        "locator",
+        "verified_on",
+        "volatile",
+        "note"
+      ],
+      "title": "SourceRecord",
+      "type": "object"
+    },
+    "TemporalMode": {
+      "enum": [
+        "past",
+        "present",
+        "future",
+        "neutral"
+      ],
+      "title": "TemporalMode",
+      "type": "string"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "const": "2026-07-24",
+      "default": "2026-07-24",
+      "title": "As Of",
+      "type": "string"
+    },
+    "candidate_id": {
+      "const": "yuxin-chen",
+      "default": "yuxin-chen",
+      "title": "Candidate Id",
+      "type": "string"
+    },
+    "claims": {
+      "items": {
+        "$ref": "#/$defs/ProfileClaim"
+      },
+      "minItems": 20,
+      "title": "Claims",
+      "type": "array"
+    },
+    "locked_absent_entities": {
+      "additionalProperties": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "propertyNames": {
+        "enum": [
+          "awards",
+          "employment",
+          "grades",
+          "language_tests",
+          "publications",
+          "recommendations",
+          "transcript_courses"
+        ]
+      },
+      "title": "Locked Absent Entities",
+      "type": "object"
+    },
+    "missing_fields": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Missing Fields",
+      "type": "array"
+    },
+    "numeric_facts": {
+      "items": {
+        "$ref": "#/$defs/NumericFact"
+      },
+      "title": "Numeric Facts",
+      "type": "array"
+    },
+    "projects": {
+      "items": {
+        "$ref": "#/$defs/ProjectRecord"
+      },
+      "maxItems": 4,
+      "minItems": 4,
+      "title": "Projects",
+      "type": "array"
+    },
+    "public_name": {
+      "const": "Yuxin Chen",
+      "default": "Yuxin Chen",
+      "title": "Public Name",
+      "type": "string"
+    },
+    "research_identity": {
+      "minLength": 1,
+      "title": "Research Identity",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "0.1.0",
+      "default": "0.1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "sources": {
+      "items": {
+        "$ref": "#/$defs/SourceRecord"
+      },
+      "minItems": 5,
+      "title": "Sources",
+      "type": "array"
+    }
+  },
+  "required": [
+    "research_identity",
+    "sources",
+    "claims",
+    "projects",
+    "missing_fields",
+    "locked_absent_entities"
+  ],
+  "title": "CandidateProfile",
+  "type": "object"
+}

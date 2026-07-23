@@ -1,0 +1,1308 @@
+{
+  "as_of": "2026-07-24",
+  "candidate_id": "yuxin-chen",
+  "claims": [
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "retrieval",
+      "claim_id": "ecoquant-retrieval",
+      "limitation": "The fixture is synthetic and not an external benchmark.",
+      "project_id": "ecoquant",
+      "source_ids": [
+        "ecoquant-dossier"
+      ],
+      "state": "experimentally-supported",
+      "text": "A deterministic local fixture contains 60 documents and 60 questions with BM25, dense, hybrid, and KG-assisted rankings."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "grounding",
+      "claim_id": "ecoquant-citations",
+      "limitation": "The values are aggregate synthetic-fixture observations.",
+      "project_id": "ecoquant",
+      "source_ids": [
+        "ecoquant-dossier"
+      ],
+      "state": "experimentally-supported",
+      "text": "The local citation artifact covers 60 examples and 240 judgements, recording faithfulness 0.8479 and unsupported rate 0.0833."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "financial-ai",
+      "claim_id": "ecoquant-valuation",
+      "limitation": "Scenarios are model fixtures rather than market forecasts.",
+      "project_id": "ecoquant",
+      "source_ids": [
+        "ecoquant-dossier"
+      ],
+      "state": "validated",
+      "text": "The valuation script produces deterministic spread and price sensitivity scenarios and passed the targeted research test layer."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "document-intelligence",
+      "claim_id": "ecoquant-docintel",
+      "limitation": "The source document is synthetic and the flow is a support fixture.",
+      "project_id": "ecoquant",
+      "source_ids": [
+        "ecoquant-dossier"
+      ],
+      "state": "validated",
+      "text": "A bounded PDF Manager support flow creates structured evidence from a synthetic document and passed its targeted test."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "integration",
+      "claim_id": "ecoquant-live-integration",
+      "limitation": "No live model, chain, transaction, or deployment was tested.",
+      "project_id": "ecoquant",
+      "source_ids": [
+        "ecoquant-dossier"
+      ],
+      "state": "prototype-only",
+      "text": "The repository contains prototype interfaces for external-model and API integration, but their live behavior is not verified here."
+    },
+    {
+      "allowed_materials": [
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "interview-answers",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "future"
+      ],
+      "category": "future-work",
+      "claim_id": "ecoquant-external-validation",
+      "limitation": "No external validation result exists in this release.",
+      "project_id": "ecoquant",
+      "source_ids": [
+        "ecoquant-dossier"
+      ],
+      "state": "planned",
+      "text": "Planned: evaluate the evidence and valuation workflow on licensed public documents and independently review the resulting claims."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "learning-analytics",
+      "claim_id": "auralynq-memory",
+      "limitation": "Implementation does not establish educational efficacy.",
+      "project_id": "auralynq",
+      "source_ids": [
+        "auralynq-dossier"
+      ],
+      "state": "implemented",
+      "text": "The repository implements local knowledge-memory and learning-analytics components for attempt-driven review."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "recommendation",
+      "claim_id": "auralynq-review-strategies",
+      "limitation": "The benchmark contains synthetic traces, not learner outcomes.",
+      "project_id": "auralynq",
+      "source_ids": [
+        "auralynq-dossier"
+      ],
+      "state": "experimentally-supported",
+      "text": "A deterministic local benchmark records 320 synthetic learning events across review strategies with seed 42."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "calibration",
+      "claim_id": "auralynq-calibration",
+      "limitation": "The trace is synthetic and does not represent a learner population.",
+      "project_id": "auralynq",
+      "source_ids": [
+        "auralynq-dossier"
+      ],
+      "state": "experimentally-supported",
+      "text": "The research artifacts record confidence-calibration behavior on a synthetic learning trace."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "reproducibility",
+      "claim_id": "auralynq-review-validation",
+      "limitation": "The command did not run browser or full backend tests.",
+      "project_id": "auralynq",
+      "source_ids": [
+        "auralynq-dossier"
+      ],
+      "state": "validated",
+      "text": "The targeted review-strategy simulation passed its captured offline research tests."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "interface",
+      "claim_id": "auralynq-cockpit",
+      "limitation": "The browser test was not run in the captured verification command.",
+      "project_id": "auralynq",
+      "source_ids": [
+        "auralynq-dossier"
+      ],
+      "state": "prototype-only",
+      "text": "A web-cockpit test file and captured screenshot show an implemented interface surface, without proving the complete workflow."
+    },
+    {
+      "allowed_materials": [
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "interview-answers",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "future"
+      ],
+      "category": "future-work",
+      "claim_id": "auralynq-user-efficacy",
+      "limitation": "No real-learner efficacy result exists.",
+      "project_id": "auralynq",
+      "source_ids": [
+        "auralynq-dossier"
+      ],
+      "state": "planned",
+      "text": "Planned: evaluate the review loop with consented longitudinal learner data and predeclared outcome measures."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "risk-simulation",
+      "claim_id": "gbl-stress",
+      "limitation": "All positions and shocks are synthetic.",
+      "project_id": "green-bond-lending",
+      "source_ids": [
+        "green-bond-lending-dossier"
+      ],
+      "state": "experimentally-supported",
+      "text": "The local benchmark records 180 synthetic stress scenarios, 90 risk events, 900 invariant checks, and seed 42."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "protocol-boundary",
+      "claim_id": "gbl-threshold",
+      "limitation": "This is one documented convention, not a universal lending rule.",
+      "project_id": "green-bond-lending",
+      "source_ids": [
+        "green-bond-lending-dossier"
+      ],
+      "state": "validated",
+      "text": "The targeted research tests validate that the local fixture treats threshold equality as liquidatable."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "smart-contract",
+      "claim_id": "gbl-contract",
+      "limitation": "The contract test was not run by the captured targeted command.",
+      "project_id": "green-bond-lending",
+      "source_ids": [
+        "green-bond-lending-dossier"
+      ],
+      "state": "prototype-only",
+      "text": "The repository contains a Solidity lending-contract prototype and contract-test source, without a captured deployment or audit."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "backend",
+      "claim_id": "gbl-backend",
+      "limitation": "No availability, load, or production persistence test is recorded.",
+      "project_id": "green-bond-lending",
+      "source_ids": [
+        "green-bond-lending-dossier"
+      ],
+      "state": "implemented",
+      "text": "The repository implements a local backend for lending and listing state, but this dossier does not validate deployment."
+    },
+    {
+      "allowed_materials": [
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "interview-answers",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "future"
+      ],
+      "category": "future-work",
+      "claim_id": "gbl-deployment-audit",
+      "limitation": "No deployment or external audit evidence exists.",
+      "project_id": "green-bond-lending",
+      "source_ids": [
+        "green-bond-lending-dossier"
+      ],
+      "state": "planned",
+      "text": "Planned: deploy only after chain-specific testing, oracle threat analysis, and independent smart-contract review."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "research-engineering",
+      "claim_id": "ai-lab-runners",
+      "limitation": "The inspected runners are small local demonstrations.",
+      "project_id": "ai-research-engineering-lab",
+      "source_ids": [
+        "ai-research-engineering-lab-dossier"
+      ],
+      "state": "implemented",
+      "text": "The repository implements independent local runners across core AI method areas and writes outputs under a shared research directory."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "baseline-evaluation",
+      "claim_id": "ai-lab-results",
+      "limitation": "The artifacts are local fixtures and were not freshly regenerated here.",
+      "project_id": "ai-research-engineering-lab",
+      "source_ids": [
+        "ai-research-engineering-lab-dossier"
+      ],
+      "state": "experimentally-supported",
+      "text": "Committed local artifacts record retrieval, knowledge-graph, and deterministic agent-proxy comparisons."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "reproducibility",
+      "claim_id": "ai-lab-reproducibility",
+      "limitation": "This is a small local configuration, not cross-infrastructure proof.",
+      "project_id": "ai-research-engineering-lab",
+      "source_ids": [
+        "ai-research-engineering-lab-dossier"
+      ],
+      "state": "experimentally-supported",
+      "text": "A local reproducibility configuration records 180 samples and seed 42 alongside committed check results."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "verification",
+      "claim_id": "ai-lab-current-verification",
+      "limitation": "A fresh complete run is not available in this capture.",
+      "project_id": "ai-research-engineering-lab",
+      "source_ids": [
+        "ai-research-engineering-lab-dossier"
+      ],
+      "state": "prototype-only",
+      "text": "The current aggregate test attempt is recorded as blocked by a missing plotting dependency rather than reported as passing."
+    },
+    {
+      "allowed_materials": [
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "interview-answers",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "future"
+      ],
+      "category": "future-work",
+      "claim_id": "ai-lab-external-study",
+      "limitation": "No external benchmark result is part of this release.",
+      "project_id": "ai-research-engineering-lab",
+      "source_ids": [
+        "ai-research-engineering-lab-dossier"
+      ],
+      "state": "planned",
+      "text": "Planned: add external datasets and predeclared comparisons only after the local dependency and rerun contract is stabilized."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "present",
+        "neutral"
+      ],
+      "category": "research-identity",
+      "claim_id": "profile-research-identity",
+      "limitation": "This is a portfolio direction, not an employment title.",
+      "project_id": null,
+      "source_ids": [
+        "public-research-profile"
+      ],
+      "state": "profile-fact",
+      "text": "I build reproducible AI research-engineering systems for financial, enterprise, and learning decision intelligence."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present"
+      ],
+      "category": "technical-scope",
+      "claim_id": "profile-technical-scope",
+      "limitation": "Breadth is evidenced by bounded projects, not professional tenure.",
+      "project_id": null,
+      "source_ids": [
+        "public-research-profile",
+        "ecoquant-dossier",
+        "auralynq-dossier",
+        "green-bond-lending-dossier",
+        "ai-research-engineering-lab-dossier"
+      ],
+      "state": "profile-fact",
+      "text": "The public portfolio demonstrates Python, TypeScript, Solidity, retrieval evaluation, risk simulation, technical writing, and reproducibility practices."
+    }
+  ],
+  "locked_absent_entities": {
+    "awards": [],
+    "employment": [],
+    "grades": [],
+    "language_tests": [],
+    "publications": [],
+    "recommendations": [],
+    "transcript_courses": []
+  },
+  "missing_fields": [
+    "academic degree records",
+    "verified transcript course names",
+    "grades and GPA",
+    "employment history and dates",
+    "language-test results",
+    "private contact details",
+    "awards and scholarships received",
+    "publications",
+    "recommender-authored statements"
+  ],
+  "numeric_facts": [
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "fact_id": "ecoquant-retrieval-number-1",
+      "meaning": "fixture document and question counts",
+      "source_ids": [
+        "ecoquant-dossier"
+      ],
+      "token": "60"
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "fact_id": "ecoquant-citations-number-1",
+      "meaning": "evaluated examples",
+      "source_ids": [
+        "ecoquant-dossier"
+      ],
+      "token": "60"
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "fact_id": "ecoquant-citations-number-2",
+      "meaning": "recorded judgements",
+      "source_ids": [
+        "ecoquant-dossier"
+      ],
+      "token": "240"
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "fact_id": "ecoquant-citations-number-3",
+      "meaning": "fixture faithfulness",
+      "source_ids": [
+        "ecoquant-dossier"
+      ],
+      "token": "0.8479"
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "fact_id": "ecoquant-citations-number-4",
+      "meaning": "fixture unsupported rate",
+      "source_ids": [
+        "ecoquant-dossier"
+      ],
+      "token": "0.0833"
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "fact_id": "auralynq-review-strategies-number-1",
+      "meaning": "synthetic event count",
+      "source_ids": [
+        "auralynq-dossier"
+      ],
+      "token": "320"
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "fact_id": "auralynq-review-strategies-number-2",
+      "meaning": "fixed simulation seed",
+      "source_ids": [
+        "auralynq-dossier"
+      ],
+      "token": "42"
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "fact_id": "gbl-stress-number-1",
+      "meaning": "scenario count",
+      "source_ids": [
+        "green-bond-lending-dossier"
+      ],
+      "token": "180"
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "fact_id": "gbl-stress-number-2",
+      "meaning": "risk-event count",
+      "source_ids": [
+        "green-bond-lending-dossier"
+      ],
+      "token": "90"
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "fact_id": "gbl-stress-number-3",
+      "meaning": "invariant-check count",
+      "source_ids": [
+        "green-bond-lending-dossier"
+      ],
+      "token": "900"
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "fact_id": "gbl-stress-number-4",
+      "meaning": "fixed seed",
+      "source_ids": [
+        "green-bond-lending-dossier"
+      ],
+      "token": "42"
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "fact_id": "ai-lab-reproducibility-number-1",
+      "meaning": "configured sample count",
+      "source_ids": [
+        "ai-research-engineering-lab-dossier"
+      ],
+      "token": "180"
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "fact_id": "ai-lab-reproducibility-number-2",
+      "meaning": "configured random seed",
+      "source_ids": [
+        "ai-research-engineering-lab-dossier"
+      ],
+      "token": "42"
+    }
+  ],
+  "projects": [
+    {
+      "claim_ids": [
+        "ecoquant-retrieval",
+        "ecoquant-citations",
+        "ecoquant-valuation",
+        "ecoquant-docintel",
+        "ecoquant-live-integration",
+        "ecoquant-external-validation"
+      ],
+      "flagship_position": 1,
+      "narratives": [
+        {
+          "claim_ids": [
+            "ecoquant-retrieval",
+            "ecoquant-citations",
+            "ecoquant-valuation",
+            "ecoquant-docintel"
+          ],
+          "target_words": 100,
+          "text": "EcoQuant Pro explores evidence-grounded analysis for green bonds and real-world assets. The inspected research layer provides deterministic retrieval and citation evaluation, valuation-sensitivity scripts, and a PDF Manager support flow that turns a synthetic document into structured evidence. Targeted research tests passed in the captured workspace, and the checked-in result artifacts support only local fixture observations. External model calls, live chains, market accuracy, production deployment, and regulatory suitability are not established. The evidence is frozen by relative path and SHA-256, and each statement keeps a visible boundary between implementation, scoped verification, local results, prototypes, and future work."
+        },
+        {
+          "claim_ids": [
+            "ecoquant-retrieval",
+            "ecoquant-citations",
+            "ecoquant-valuation",
+            "ecoquant-docintel"
+          ],
+          "target_words": 250,
+          "text": "EcoQuant Pro explores evidence-grounded analysis for green bonds and real-world assets. Green-finance decisions combine document interpretation, provenance, risk assumptions, and price sensitivity, so unsupported claims can propagate into downstream analysis.\n\nThe inspected research layer provides deterministic retrieval and citation evaluation, valuation-sensitivity scripts, and a PDF Manager support flow that turns a synthetic document into structured evidence. The bounded evidence path runs from document support through retrieval and citations into scenario-based valuation outputs.\n\nTargeted research tests passed in the captured workspace, and the checked-in result artifacts support only local fixture observations. A no-key demo can validate the evidence flow, inspect record-level outputs, and compare scoped retrieval methods.\n\nEvidence is governed at claim level. Source files establish that a method or interface exists; passed targeted checks support only their named behavior; deterministic artifacts support only local observations. Prototype and planned items remain visibly separate. Relative paths and content hashes make the inspected snapshot reviewable without copying source code into this repository. Failure cases, missing checks, and absent screenshots stay in the record so the portfolio copy does not turn an evidence gap into a positive result. Each description points back to approved claims rather than introducing new capabilities or metrics.\n\nExternal model calls, live chains, market accuracy, production deployment, and regulatory suitability are not established."
+        },
+        {
+          "claim_ids": [
+            "ecoquant-retrieval",
+            "ecoquant-citations",
+            "ecoquant-valuation",
+            "ecoquant-docintel"
+          ],
+          "target_words": 500,
+          "text": "EcoQuant Pro explores evidence-grounded analysis for green bonds and real-world assets. Green-finance decisions combine document interpretation, provenance, risk assumptions, and price sensitivity, so unsupported claims can propagate into downstream analysis. The project is strongest when discussed as a trustworthy evaluation and financial-sensitivity prototype rather than as an automated investment or credit system.\n\nThe inspected research layer provides deterministic retrieval and citation evaluation, valuation-sensitivity scripts, and a PDF Manager support flow that turns a synthetic document into structured evidence. The bounded evidence path runs from document support through retrieval and citations into scenario-based valuation outputs.\n\nThe dossier separates implementation evidence, test evidence, and local experimental artifacts so that each statement can be traced to a specific inspected file. It also records failure cases and missing evidence instead of treating absence as success.\n\nTargeted research tests passed in the captured workspace, and the checked-in result artifacts support only local fixture observations. A no-key demo can validate the evidence flow, inspect record-level outputs, and compare scoped retrieval methods.\n\nFor an interview or research discussion, the project is presented as a bounded engineering contribution: a decision problem was translated into data structures, deterministic methods, checks, and reviewable outputs. The strongest evidence is named directly, while broader deployment or impact questions remain open.\n\nThis framing supports honest comparison across the portfolio. Source code shows what exists, targeted checks show what passed in the captured environment, and result artifacts support only the local observations stated in their scope.\n\nThe practical value of this dossier is traceability. A reviewer can move from a concise public description to a stable claim identifier, then to one or more evidence records and the frozen hash of each inspected source file. Numeric statements receive their own evidence links, which reduces the risk that a precise-looking metric is detached from its fixture or test scope. Verification commands are recorded with pass counts and limitations. A failed attempt or missing dependency is retained instead of being summarized as success. Architecture diagrams and demo steps are therefore presentation aids rather than additional proof. The dossier does not infer external impact, security, deployment quality, or user outcomes. Future evaluation should refresh source hashes, rerun the relevant checks in a declared environment, and add independent evidence only when it exists. Until then, the approved wording remains deliberately bounded to what this snapshot can support. This structure also makes later evidence refreshes explicit, comparable, and suitable for careful review.\n\nExternal model calls, live chains, market accuracy, production deployment, and regulatory suitability are not established."
+        }
+      ],
+      "project_id": "ecoquant",
+      "public_name": "EcoQuant Pro",
+      "role": "Flagship financial AI and document-evidence system, with PDF Manager treated as supporting infrastructure."
+    },
+    {
+      "claim_ids": [
+        "auralynq-memory",
+        "auralynq-review-strategies",
+        "auralynq-calibration",
+        "auralynq-review-validation",
+        "auralynq-cockpit",
+        "auralynq-user-efficacy"
+      ],
+      "flagship_position": 2,
+      "narratives": [
+        {
+          "claim_ids": [
+            "auralynq-memory",
+            "auralynq-review-strategies",
+            "auralynq-calibration",
+            "auralynq-cockpit"
+          ],
+          "target_words": 100,
+          "text": "Auralynq is a local-first learning-intelligence system that organizes attempt evidence into diagnosis and review workflows. The inspected code models knowledge memory and learning analytics, while deterministic fixtures compare review strategies and record calibration behavior. The targeted research simulation tests passed, and a captured web screenshot provides limited visual evidence of an implemented surface. The research traces are synthetic; no longitudinal learner outcome, exam improvement, or population-level efficacy claim is supported. The evidence is frozen by relative path and SHA-256, and each statement keeps a visible boundary between implementation, scoped verification, local results, prototypes, and future work."
+        },
+        {
+          "claim_ids": [
+            "auralynq-memory",
+            "auralynq-review-strategies",
+            "auralynq-calibration",
+            "auralynq-cockpit"
+          ],
+          "target_words": 250,
+          "text": "Auralynq is a local-first learning-intelligence system that organizes attempt evidence into diagnosis and review workflows. Study decisions are often fragmented across mistakes, timing, confidence, topic recurrence, and overdue review state.\n\nThe inspected code models knowledge memory and learning analytics, while deterministic fixtures compare review strategies and record calibration behavior. Learning events feed local memory and analytics, which inform review selection and the web cockpit.\n\nThe targeted research simulation tests passed, and a captured web screenshot provides limited visual evidence of an implemented surface. A demo should follow one attempt through diagnosis, memory update, and review selection, then inspect the synthetic strategy comparison.\n\nEvidence is governed at claim level. Source files establish that a method or interface exists; passed targeted checks support only their named behavior; deterministic artifacts support only local observations. Prototype and planned items remain visibly separate. Relative paths and content hashes make the inspected snapshot reviewable without copying source code into this repository. Failure cases, missing checks, and absent screenshots stay in the record so the portfolio copy does not turn an evidence gap into a positive result. Each description points back to approved claims rather than introducing new capabilities or metrics.\n\nThe research traces are synthetic; no longitudinal learner outcome, exam improvement, or population-level efficacy claim is supported."
+        },
+        {
+          "claim_ids": [
+            "auralynq-memory",
+            "auralynq-review-strategies",
+            "auralynq-calibration",
+            "auralynq-cockpit"
+          ],
+          "target_words": 500,
+          "text": "Auralynq is a local-first learning-intelligence system that organizes attempt evidence into diagnosis and review workflows. Study decisions are often fragmented across mistakes, timing, confidence, topic recurrence, and overdue review state. The defensible contribution is the explicit learning-evidence loop and its reproducible local evaluation, not automated educational success.\n\nThe inspected code models knowledge memory and learning analytics, while deterministic fixtures compare review strategies and record calibration behavior. Learning events feed local memory and analytics, which inform review selection and the web cockpit.\n\nThe dossier separates implementation evidence, test evidence, and local experimental artifacts so that each statement can be traced to a specific inspected file. It also records failure cases and missing evidence instead of treating absence as success.\n\nThe targeted research simulation tests passed, and a captured web screenshot provides limited visual evidence of an implemented surface. A demo should follow one attempt through diagnosis, memory update, and review selection, then inspect the synthetic strategy comparison.\n\nFor an interview or research discussion, the project is presented as a bounded engineering contribution: a decision problem was translated into data structures, deterministic methods, checks, and reviewable outputs. The strongest evidence is named directly, while broader deployment or impact questions remain open.\n\nThis framing supports honest comparison across the portfolio. Source code shows what exists, targeted checks show what passed in the captured environment, and result artifacts support only the local observations stated in their scope.\n\nThe practical value of this dossier is traceability. A reviewer can move from a concise public description to a stable claim identifier, then to one or more evidence records and the frozen hash of each inspected source file. Numeric statements receive their own evidence links, which reduces the risk that a precise-looking metric is detached from its fixture or test scope. Verification commands are recorded with pass counts and limitations. A failed attempt or missing dependency is retained instead of being summarized as success. Architecture diagrams and demo steps are therefore presentation aids rather than additional proof. The dossier does not infer external impact, security, deployment quality, or user outcomes. Future evaluation should refresh source hashes, rerun the relevant checks in a declared environment, and add independent evidence only when it exists. Until then, the approved wording remains deliberately bounded to what this snapshot can support. This structure also makes later evidence refreshes explicit, comparable, and suitable for careful review.\n\nThe research traces are synthetic; no longitudinal learner outcome, exam improvement, or population-level efficacy claim is supported."
+        }
+      ],
+      "project_id": "auralynq",
+      "public_name": "Auralynq",
+      "role": "Flagship learning-intelligence and active-review system."
+    },
+    {
+      "claim_ids": [
+        "gbl-stress",
+        "gbl-threshold",
+        "gbl-contract",
+        "gbl-backend",
+        "gbl-deployment-audit"
+      ],
+      "flagship_position": 3,
+      "narratives": [
+        {
+          "claim_ids": [
+            "gbl-stress",
+            "gbl-threshold",
+            "gbl-contract",
+            "gbl-backend"
+          ],
+          "target_words": 100,
+          "text": "Green Bond Lending models lending against tokenized green-bond collateral with explicit state and risk boundaries. The inspected project combines a Solidity contract prototype, a local backend, and a deterministic LTV stress runner with invariant outputs. The targeted stress tests passed and the result artifacts record scenario, risk-event, and invariant-check counts. No mainnet deployment, oracle-security review, legal analysis, market liquidity study, or external smart-contract audit is established. The evidence is frozen by relative path and SHA-256, and each statement keeps a visible boundary between implementation, scoped verification, local results, prototypes, and future work."
+        },
+        {
+          "claim_ids": [
+            "gbl-stress",
+            "gbl-threshold",
+            "gbl-contract",
+            "gbl-backend"
+          ],
+          "target_words": 250,
+          "text": "Green Bond Lending models lending against tokenized green-bond collateral with explicit state and risk boundaries. Collateralized lending requires transparent debt, collateral value, liquidation thresholds, state transitions, and conservation checks.\n\nThe inspected project combines a Solidity contract prototype, a local backend, and a deterministic LTV stress runner with invariant outputs. Collateral and debt state feed LTV evaluation, liquidation decisions, and protocol invariant checks.\n\nThe targeted stress tests passed and the result artifacts record scenario, risk-event, and invariant-check counts. A demo should run the stress fixture, inspect threshold equality, and trace the corresponding invariant records.\n\nEvidence is governed at claim level. Source files establish that a method or interface exists; passed targeted checks support only their named behavior; deterministic artifacts support only local observations. Prototype and planned items remain visibly separate. Relative paths and content hashes make the inspected snapshot reviewable without copying source code into this repository. Failure cases, missing checks, and absent screenshots stay in the record so the portfolio copy does not turn an evidence gap into a positive result. Each description points back to approved claims rather than introducing new capabilities or metrics.\n\nNo mainnet deployment, oracle-security review, legal analysis, market liquidity study, or external smart-contract audit is established."
+        },
+        {
+          "claim_ids": [
+            "gbl-stress",
+            "gbl-threshold",
+            "gbl-contract",
+            "gbl-backend"
+          ],
+          "target_words": 500,
+          "text": "Green Bond Lending models lending against tokenized green-bond collateral with explicit state and risk boundaries. Collateralized lending requires transparent debt, collateral value, liquidation thresholds, state transitions, and conservation checks. The project is best defended as a protocol reasoning and risk-fixture exercise rather than a deployed financial service.\n\nThe inspected project combines a Solidity contract prototype, a local backend, and a deterministic LTV stress runner with invariant outputs. Collateral and debt state feed LTV evaluation, liquidation decisions, and protocol invariant checks.\n\nThe dossier separates implementation evidence, test evidence, and local experimental artifacts so that each statement can be traced to a specific inspected file. It also records failure cases and missing evidence instead of treating absence as success.\n\nThe targeted stress tests passed and the result artifacts record scenario, risk-event, and invariant-check counts. A demo should run the stress fixture, inspect threshold equality, and trace the corresponding invariant records.\n\nFor an interview or research discussion, the project is presented as a bounded engineering contribution: a decision problem was translated into data structures, deterministic methods, checks, and reviewable outputs. The strongest evidence is named directly, while broader deployment or impact questions remain open.\n\nThis framing supports honest comparison across the portfolio. Source code shows what exists, targeted checks show what passed in the captured environment, and result artifacts support only the local observations stated in their scope.\n\nThe practical value of this dossier is traceability. A reviewer can move from a concise public description to a stable claim identifier, then to one or more evidence records and the frozen hash of each inspected source file. Numeric statements receive their own evidence links, which reduces the risk that a precise-looking metric is detached from its fixture or test scope. Verification commands are recorded with pass counts and limitations. A failed attempt or missing dependency is retained instead of being summarized as success. Architecture diagrams and demo steps are therefore presentation aids rather than additional proof. The dossier does not infer external impact, security, deployment quality, or user outcomes. Future evaluation should refresh source hashes, rerun the relevant checks in a declared environment, and add independent evidence only when it exists. Until then, the approved wording remains deliberately bounded to what this snapshot can support. This structure also makes later evidence refreshes explicit, comparable, and suitable for careful review.\n\nNo mainnet deployment, oracle-security review, legal analysis, market liquidity study, or external smart-contract audit is established."
+        }
+      ],
+      "project_id": "green-bond-lending",
+      "public_name": "Green Bond Lending",
+      "role": "Flagship RWA lending protocol and risk-simulation project."
+    },
+    {
+      "claim_ids": [
+        "ai-lab-runners",
+        "ai-lab-results",
+        "ai-lab-reproducibility",
+        "ai-lab-current-verification",
+        "ai-lab-external-study"
+      ],
+      "flagship_position": 4,
+      "narratives": [
+        {
+          "claim_ids": [
+            "ai-lab-runners",
+            "ai-lab-results",
+            "ai-lab-reproducibility",
+            "ai-lab-current-verification"
+          ],
+          "target_words": 100,
+          "text": "AI Research Engineering Lab organizes compact method demonstrations that support the portfolio's applied systems. The inspected repository contains lab runners and result artifacts for machine learning, retrieval, knowledge graphs, agents, reproducibility, and financial AI. Existing result files are inventoried as local evidence, while the current aggregate test attempt is disclosed as blocked by a missing plotting dependency. The labs are small method demonstrations, not external benchmarks, peer-reviewed studies, comprehensive course coverage, or fresh passing tests. The evidence is frozen by relative path and SHA-256, and each statement keeps a visible boundary between implementation, scoped verification, local results, prototypes, and future work."
+        },
+        {
+          "claim_ids": [
+            "ai-lab-runners",
+            "ai-lab-results",
+            "ai-lab-reproducibility",
+            "ai-lab-current-verification"
+          ],
+          "target_words": 250,
+          "text": "AI Research Engineering Lab organizes compact method demonstrations that support the portfolio's applied systems. A portfolio can name many AI techniques without showing how baselines, data, metrics, and reproducibility decisions are implemented.\n\nThe inspected repository contains lab runners and result artifacts for machine learning, retrieval, knowledge graphs, agents, reproducibility, and financial AI. Shared deterministic utilities feed independent lab runners, which write machine-readable results and scoped reports.\n\nExisting result files are inventoried as local evidence, while the current aggregate test attempt is disclosed as blocked by a missing plotting dependency. A demo should inspect one baseline comparison, one reproducibility record, and the explicitly recorded missing-dependency test outcome.\n\nEvidence is governed at claim level. Source files establish that a method or interface exists; passed targeted checks support only their named behavior; deterministic artifacts support only local observations. Prototype and planned items remain visibly separate. Relative paths and content hashes make the inspected snapshot reviewable without copying source code into this repository. Failure cases, missing checks, and absent screenshots stay in the record so the portfolio copy does not turn an evidence gap into a positive result. Each description points back to approved claims rather than introducing new capabilities or metrics.\n\nThe labs are small method demonstrations, not external benchmarks, peer-reviewed studies, comprehensive course coverage, or fresh passing tests."
+        },
+        {
+          "claim_ids": [
+            "ai-lab-runners",
+            "ai-lab-results",
+            "ai-lab-reproducibility",
+            "ai-lab-current-verification"
+          ],
+          "target_words": 500,
+          "text": "AI Research Engineering Lab organizes compact method demonstrations that support the portfolio's applied systems. A portfolio can name many AI techniques without showing how baselines, data, metrics, and reproducibility decisions are implemented. The repository's value lies in method literacy and reproducibility discipline, including honest disclosure when the current environment cannot rerun the full suite.\n\nThe inspected repository contains lab runners and result artifacts for machine learning, retrieval, knowledge graphs, agents, reproducibility, and financial AI. Shared deterministic utilities feed independent lab runners, which write machine-readable results and scoped reports.\n\nThe dossier separates implementation evidence, test evidence, and local experimental artifacts so that each statement can be traced to a specific inspected file. It also records failure cases and missing evidence instead of treating absence as success.\n\nExisting result files are inventoried as local evidence, while the current aggregate test attempt is disclosed as blocked by a missing plotting dependency. A demo should inspect one baseline comparison, one reproducibility record, and the explicitly recorded missing-dependency test outcome.\n\nFor an interview or research discussion, the project is presented as a bounded engineering contribution: a decision problem was translated into data structures, deterministic methods, checks, and reviewable outputs. The strongest evidence is named directly, while broader deployment or impact questions remain open.\n\nThis framing supports honest comparison across the portfolio. Source code shows what exists, targeted checks show what passed in the captured environment, and result artifacts support only the local observations stated in their scope.\n\nThe practical value of this dossier is traceability. A reviewer can move from a concise public description to a stable claim identifier, then to one or more evidence records and the frozen hash of each inspected source file. Numeric statements receive their own evidence links, which reduces the risk that a precise-looking metric is detached from its fixture or test scope. Verification commands are recorded with pass counts and limitations. A failed attempt or missing dependency is retained instead of being summarized as success. Architecture diagrams and demo steps are therefore presentation aids rather than additional proof. The dossier does not infer external impact, security, deployment quality, or user outcomes. Future evaluation should refresh source hashes, rerun the relevant checks in a declared environment, and add independent evidence only when it exists. Until then, the approved wording remains deliberately bounded to what this snapshot can support. This structure also makes later evidence refreshes explicit, comparable, and suitable for careful review.\n\nThe labs are small method demonstrations, not external benchmarks, peer-reviewed studies, comprehensive course coverage, or fresh passing tests."
+        }
+      ],
+      "project_id": "ai-research-engineering-lab",
+      "public_name": "AI Research Engineering Lab",
+      "role": "Flagship research-foundation repository for deterministic AI method labs."
+    }
+  ],
+  "public_name": "Yuxin Chen",
+  "research_identity": "Trustworthy AI systems for financial, enterprise, and learning decision intelligence",
+  "schema_version": "0.1.0",
+  "sources": [
+    {
+      "kind": "tagged-repository",
+      "locator": "https://github.com/ElianChyndale/project-evidence-dossiers/blob/v0.1.0/dossiers/ecoquant/manifest.json",
+      "note": "Frozen from the public v0.1.0 evidence-dossier release.",
+      "sha256": "0e2fd58de1878b3a5594fa1167a38ff915a2c3a403edd931048d1a865147dbe3",
+      "source_id": "ecoquant-dossier",
+      "verified_on": "2026-07-24",
+      "volatile": false
+    },
+    {
+      "kind": "tagged-repository",
+      "locator": "https://github.com/ElianChyndale/project-evidence-dossiers/blob/v0.1.0/dossiers/auralynq/manifest.json",
+      "note": "Frozen from the public v0.1.0 evidence-dossier release.",
+      "sha256": "9a6821a23e107daaac1b82c908c158660c7f0ea610e14508bb13f86a6f9af0d1",
+      "source_id": "auralynq-dossier",
+      "verified_on": "2026-07-24",
+      "volatile": false
+    },
+    {
+      "kind": "tagged-repository",
+      "locator": "https://github.com/ElianChyndale/project-evidence-dossiers/blob/v0.1.0/dossiers/green-bond-lending/manifest.json",
+      "note": "Frozen from the public v0.1.0 evidence-dossier release.",
+      "sha256": "804ae88eb0bf9ced7bf1285a378c12bc4bbb7ccf8045c647d883f1b3c09b7df3",
+      "source_id": "green-bond-lending-dossier",
+      "verified_on": "2026-07-24",
+      "volatile": false
+    },
+    {
+      "kind": "tagged-repository",
+      "locator": "https://github.com/ElianChyndale/project-evidence-dossiers/blob/v0.1.0/dossiers/ai-research-engineering-lab/manifest.json",
+      "note": "Frozen from the public v0.1.0 evidence-dossier release.",
+      "sha256": "9b33877e106aae07a8ae06c660e5e65476167184a96ba5a251ac40d5751e5d6d",
+      "source_id": "ai-research-engineering-lab-dossier",
+      "verified_on": "2026-07-24",
+      "volatile": false
+    },
+    {
+      "kind": "public-profile",
+      "locator": "fixtures/source_snapshots/public-profile.md",
+      "note": "Frozen public portfolio profile; private academic records are excluded.",
+      "sha256": "de2b91974424e847fa1f6a4a66dbbf24db59180ebda5f17652993b1b547ec2c4",
+      "source_id": "public-research-profile",
+      "verified_on": "2026-07-24",
+      "volatile": false
+    }
+  ]
+}

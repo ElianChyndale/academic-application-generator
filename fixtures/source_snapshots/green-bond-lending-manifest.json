@@ -1,0 +1,391 @@
+{
+  "architecture_edges": [
+    {
+      "label": "value",
+      "source": "collateral",
+      "target": "ltv"
+    },
+    {
+      "label": "balance",
+      "source": "debt",
+      "target": "ltv"
+    },
+    {
+      "label": "compare threshold",
+      "source": "ltv",
+      "target": "liquidation"
+    },
+    {
+      "label": "check transition",
+      "source": "liquidation",
+      "target": "invariants"
+    }
+  ],
+  "architecture_nodes": [
+    {
+      "label": "Collateral state",
+      "node_id": "collateral",
+      "role": "Asset input"
+    },
+    {
+      "label": "Debt state",
+      "node_id": "debt",
+      "role": "Liability input"
+    },
+    {
+      "label": "LTV engine",
+      "node_id": "ltv",
+      "role": "Risk calculation"
+    },
+    {
+      "label": "Liquidation boundary",
+      "node_id": "liquidation",
+      "role": "Decision rule"
+    },
+    {
+      "label": "Invariant checks",
+      "node_id": "invariants",
+      "role": "Protocol verification"
+    }
+  ],
+  "claims": [
+    {
+      "approved_text": "The local benchmark records 180 synthetic stress scenarios, 90 risk events, 900 invariant checks, and seed 42.",
+      "category": "risk-simulation",
+      "claim_id": "gbl-stress",
+      "evidence_ids": [
+        "gbl-stress-result",
+        "gbl-scenario-result",
+        "gbl-invariant-result"
+      ],
+      "limitations": [
+        "All positions and shocks are synthetic."
+      ],
+      "numeric_assertions": [
+        {
+          "evidence_id": "gbl-stress-result",
+          "meaning": "scenario count",
+          "token": "180"
+        },
+        {
+          "evidence_id": "gbl-stress-result",
+          "meaning": "risk-event count",
+          "token": "90"
+        },
+        {
+          "evidence_id": "gbl-stress-result",
+          "meaning": "invariant-check count",
+          "token": "900"
+        },
+        {
+          "evidence_id": "gbl-stress-result",
+          "meaning": "fixed seed",
+          "token": "42"
+        }
+      ],
+      "prohibited_expansions": [
+        "market risk forecast",
+        "regulatory stress test"
+      ],
+      "state": "experimentally-supported",
+      "title": "Deterministic LTV stress benchmark"
+    },
+    {
+      "approved_text": "The targeted research tests validate that the local fixture treats threshold equality as liquidatable.",
+      "category": "protocol-boundary",
+      "claim_id": "gbl-threshold",
+      "evidence_ids": [
+        "gbl-stress-code",
+        "gbl-research-test"
+      ],
+      "limitations": [
+        "This is one documented convention, not a universal lending rule."
+      ],
+      "numeric_assertions": [],
+      "prohibited_expansions": [
+        "legally correct liquidation",
+        "complete protocol safety"
+      ],
+      "state": "validated",
+      "title": "LTV boundary behavior"
+    },
+    {
+      "approved_text": "The repository contains a Solidity lending-contract prototype and contract-test source, without a captured deployment or audit.",
+      "category": "smart-contract",
+      "claim_id": "gbl-contract",
+      "evidence_ids": [
+        "gbl-contract-code",
+        "gbl-contract-test"
+      ],
+      "limitations": [
+        "The contract test was not run by the captured targeted command."
+      ],
+      "numeric_assertions": [],
+      "prohibited_expansions": [
+        "audited contract",
+        "mainnet deployed",
+        "formally verified"
+      ],
+      "state": "prototype-only",
+      "title": "Solidity protocol prototype"
+    },
+    {
+      "approved_text": "The repository implements a local backend for lending and listing state, but this dossier does not validate deployment.",
+      "category": "backend",
+      "claim_id": "gbl-backend",
+      "evidence_ids": [
+        "gbl-backend-code"
+      ],
+      "limitations": [
+        "No availability, load, or production persistence test is recorded."
+      ],
+      "numeric_assertions": [],
+      "prohibited_expansions": [
+        "production backend",
+        "high-availability service"
+      ],
+      "state": "implemented",
+      "title": "Local backend implementation"
+    },
+    {
+      "approved_text": "Planned: deploy only after chain-specific testing, oracle threat analysis, and independent smart-contract review.",
+      "category": "future-work",
+      "claim_id": "gbl-deployment-audit",
+      "evidence_ids": [
+        "gbl-deployment-plan"
+      ],
+      "limitations": [
+        "No deployment or external audit evidence exists."
+      ],
+      "numeric_assertions": [],
+      "prohibited_expansions": [
+        "deployed protocol",
+        "externally audited"
+      ],
+      "state": "planned",
+      "title": "Deployment and external audit"
+    }
+  ],
+  "demo_steps": [
+    "Run the deterministic LTV stress fixture.",
+    "Inspect risk events and invariant-check records.",
+    "Explain the equality-at-threshold convention.",
+    "Separate the Solidity prototype from unverified deployment claims."
+  ],
+  "evidence": [
+    {
+      "evidence_id": "gbl-readme",
+      "kind": "technical-report",
+      "limitation": "Project overview is not independent validation.",
+      "project_id": "green-bond-lending",
+      "scope": "workspace-implementation-evidence",
+      "source_path": "Green-Bond-Lending1/README.md",
+      "source_sha256": "cba3e4ac07c25b6f172af0f29a11bdeb39af7350da0d63c04bffa53c2896522e",
+      "synthetic": false,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "gbl-stress-code",
+      "kind": "source-code",
+      "limitation": "Deterministic fixture runner, not a market risk engine.",
+      "project_id": "green-bond-lending",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "Green-Bond-Lending1/scripts/run_ltv_stress_test.cjs",
+      "source_sha256": "16e87d329bc8e9f9071d1bb3f05dfb5800dbb25a1459c01a25a0386bda56b6bc",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "gbl-stress-result",
+      "kind": "experiment-result",
+      "limitation": "Synthetic benchmark counts and local observations.",
+      "project_id": "green-bond-lending",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "Green-Bond-Lending1/research/results/ltv_stress_summary.json",
+      "source_sha256": "ff8a1d0b91f527b5f502094503f8f1fcf10b59f842440177a91297f4c1ae8a5f",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "gbl-scenario-result",
+      "kind": "experiment-result",
+      "limitation": "Synthetic scenario records.",
+      "project_id": "green-bond-lending",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "Green-Bond-Lending1/research/results/ltv_stress_scenarios.csv",
+      "source_sha256": "847776d9ba5045199abf55e2ac586331204f4560af62c61a00756b24c25694f4",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "gbl-invariant-result",
+      "kind": "experiment-result",
+      "limitation": "Local invariant checks are not formal verification.",
+      "project_id": "green-bond-lending",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "Green-Bond-Lending1/research/results/protocol_invariant_results.csv",
+      "source_sha256": "15e0c90efca9ff733559f777db161b20c4ededfdfed82fee8271154bf9c24e34",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "gbl-research-test",
+      "kind": "test",
+      "limitation": "Covers the stress runner and threshold behavior.",
+      "project_id": "green-bond-lending",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "Green-Bond-Lending1/test/research.ltv-stress.test.cjs",
+      "source_sha256": "8d4817c132e3c2e9b1651e9f391c92ef8076aa055beafac56711fc6c6c38ccaa",
+      "synthetic": true,
+      "verification_run_id": "green-bond-lending-research-tests"
+    },
+    {
+      "evidence_id": "gbl-contract-code",
+      "kind": "source-code",
+      "limitation": "Prototype contract was not deployed or externally audited here.",
+      "project_id": "green-bond-lending",
+      "scope": "workspace-implementation-evidence",
+      "source_path": "Green-Bond-Lending1/contracts/GreenBondPlatform.sol",
+      "source_sha256": "7b6fd316ad024876d97fdf1ccc34119f6d6825fd08e2fe5ca94cab5167333077",
+      "synthetic": false,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "gbl-contract-test",
+      "kind": "test",
+      "limitation": "Test file exists but was not part of the captured targeted run.",
+      "project_id": "green-bond-lending",
+      "scope": "workspace-implementation-evidence",
+      "source_path": "Green-Bond-Lending1/test/GreenBondPlatform.test.cjs",
+      "source_sha256": "c74ade42a27b9dda91adfdc4cea0f0f1642c6f72be4e0f02812b37dec4ad45ea",
+      "synthetic": false,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "gbl-backend-code",
+      "kind": "source-code",
+      "limitation": "Backend presence does not prove deployment reliability.",
+      "project_id": "green-bond-lending",
+      "scope": "workspace-implementation-evidence",
+      "source_path": "Green-Bond-Lending1/server.ts",
+      "source_sha256": "1bff4d585a5ed83a50bd3d2469f4b41d346d606de6268fce640ea4dfab777fcc",
+      "synthetic": false,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "gbl-deployment-plan",
+      "kind": "plan",
+      "limitation": "Deployment and audit work remain future scope.",
+      "project_id": "green-bond-lending",
+      "scope": "workspace-implementation-evidence",
+      "source_path": "Green-Bond-Lending1/README.md",
+      "source_sha256": "cba3e4ac07c25b6f172af0f29a11bdeb39af7350da0d63c04bffa53c2896522e",
+      "synthetic": false,
+      "verification_run_id": null
+    }
+  ],
+  "failure_cases": [
+    "Synthetic shocks omit real liquidity and price-discovery dynamics.",
+    "An oracle can be stale or manipulated even if local arithmetic is correct.",
+    "Passing fixture invariants is not formal verification.",
+    "A local backend may not preserve state under production concurrency."
+  ],
+  "flagship_position": 3,
+  "interview": [
+    {
+      "answer": "The local benchmark records 180 synthetic stress scenarios, 90 risk events, 900 invariant checks, and seed 42. Limitation: All positions and shocks are synthetic.",
+      "claim_ids": [
+        "gbl-stress"
+      ],
+      "question": "What evidence supports: Deterministic LTV stress benchmark?"
+    },
+    {
+      "answer": "The targeted research tests validate that the local fixture treats threshold equality as liquidatable. Limitation: This is one documented convention, not a universal lending rule.",
+      "claim_ids": [
+        "gbl-threshold"
+      ],
+      "question": "What evidence supports: LTV boundary behavior?"
+    },
+    {
+      "answer": "The repository contains a Solidity lending-contract prototype and contract-test source, without a captured deployment or audit. Limitation: The contract test was not run by the captured targeted command.",
+      "claim_ids": [
+        "gbl-contract"
+      ],
+      "question": "What evidence supports: Solidity protocol prototype?"
+    },
+    {
+      "answer": "The repository implements a local backend for lending and listing state, but this dossier does not validate deployment. Limitation: No availability, load, or production persistence test is recorded.",
+      "claim_ids": [
+        "gbl-backend"
+      ],
+      "question": "What evidence supports: Local backend implementation?"
+    },
+    {
+      "answer": "Planned: deploy only after chain-specific testing, oracle threat analysis, and independent smart-contract review. Limitation: No deployment or external audit evidence exists.",
+      "claim_ids": [
+        "gbl-deployment-audit"
+      ],
+      "question": "What evidence supports: Deployment and external audit?"
+    },
+    {
+      "answer": "No mainnet deployment, oracle-security review, legal analysis, market liquidity study, or external smart-contract audit is established.",
+      "claim_ids": [
+        "gbl-deployment-audit"
+      ],
+      "question": "What is the most important boundary of this dossier?"
+    }
+  ],
+  "limitations": [
+    "No real collateral, borrower, or market dataset is evaluated.",
+    "No custody, insolvency, securities-law, or regulatory conclusion is made.",
+    "No mainnet deployment or external smart-contract audit is recorded.",
+    "The targeted command does not cover the full contract or backend suite."
+  ],
+  "narratives": [
+    {
+      "claim_ids": [
+        "gbl-stress",
+        "gbl-threshold",
+        "gbl-contract",
+        "gbl-backend"
+      ],
+      "target_words": 100,
+      "text": "Green Bond Lending models lending against tokenized green-bond collateral with explicit state and risk boundaries. The inspected project combines a Solidity contract prototype, a local backend, and a deterministic LTV stress runner with invariant outputs. The targeted stress tests passed and the result artifacts record scenario, risk-event, and invariant-check counts. No mainnet deployment, oracle-security review, legal analysis, market liquidity study, or external smart-contract audit is established. The evidence is frozen by relative path and SHA-256, and each statement keeps a visible boundary between implementation, scoped verification, local results, prototypes, and future work."
+    },
+    {
+      "claim_ids": [
+        "gbl-stress",
+        "gbl-threshold",
+        "gbl-contract",
+        "gbl-backend"
+      ],
+      "target_words": 250,
+      "text": "Green Bond Lending models lending against tokenized green-bond collateral with explicit state and risk boundaries. Collateralized lending requires transparent debt, collateral value, liquidation thresholds, state transitions, and conservation checks.\n\nThe inspected project combines a Solidity contract prototype, a local backend, and a deterministic LTV stress runner with invariant outputs. Collateral and debt state feed LTV evaluation, liquidation decisions, and protocol invariant checks.\n\nThe targeted stress tests passed and the result artifacts record scenario, risk-event, and invariant-check counts. A demo should run the stress fixture, inspect threshold equality, and trace the corresponding invariant records.\n\nEvidence is governed at claim level. Source files establish that a method or interface exists; passed targeted checks support only their named behavior; deterministic artifacts support only local observations. Prototype and planned items remain visibly separate. Relative paths and content hashes make the inspected snapshot reviewable without copying source code into this repository. Failure cases, missing checks, and absent screenshots stay in the record so the portfolio copy does not turn an evidence gap into a positive result. Each description points back to approved claims rather than introducing new capabilities or metrics.\n\nNo mainnet deployment, oracle-security review, legal analysis, market liquidity study, or external smart-contract audit is established."
+    },
+    {
+      "claim_ids": [
+        "gbl-stress",
+        "gbl-threshold",
+        "gbl-contract",
+        "gbl-backend"
+      ],
+      "target_words": 500,
+      "text": "Green Bond Lending models lending against tokenized green-bond collateral with explicit state and risk boundaries. Collateralized lending requires transparent debt, collateral value, liquidation thresholds, state transitions, and conservation checks. The project is best defended as a protocol reasoning and risk-fixture exercise rather than a deployed financial service.\n\nThe inspected project combines a Solidity contract prototype, a local backend, and a deterministic LTV stress runner with invariant outputs. Collateral and debt state feed LTV evaluation, liquidation decisions, and protocol invariant checks.\n\nThe dossier separates implementation evidence, test evidence, and local experimental artifacts so that each statement can be traced to a specific inspected file. It also records failure cases and missing evidence instead of treating absence as success.\n\nThe targeted stress tests passed and the result artifacts record scenario, risk-event, and invariant-check counts. A demo should run the stress fixture, inspect threshold equality, and trace the corresponding invariant records.\n\nFor an interview or research discussion, the project is presented as a bounded engineering contribution: a decision problem was translated into data structures, deterministic methods, checks, and reviewable outputs. The strongest evidence is named directly, while broader deployment or impact questions remain open.\n\nThis framing supports honest comparison across the portfolio. Source code shows what exists, targeted checks show what passed in the captured environment, and result artifacts support only the local observations stated in their scope.\n\nThe practical value of this dossier is traceability. A reviewer can move from a concise public description to a stable claim identifier, then to one or more evidence records and the frozen hash of each inspected source file. Numeric statements receive their own evidence links, which reduces the risk that a precise-looking metric is detached from its fixture or test scope. Verification commands are recorded with pass counts and limitations. A failed attempt or missing dependency is retained instead of being summarized as success. Architecture diagrams and demo steps are therefore presentation aids rather than additional proof. The dossier does not infer external impact, security, deployment quality, or user outcomes. Future evaluation should refresh source hashes, rerun the relevant checks in a declared environment, and add independent evidence only when it exists. Until then, the approved wording remains deliberately bounded to what this snapshot can support. This structure also makes later evidence refreshes explicit, comparable, and suitable for careful review.\n\nNo mainnet deployment, oracle-security review, legal analysis, market liquidity study, or external smart-contract audit is established."
+    }
+  ],
+  "project_id": "green-bond-lending",
+  "public_name": "Green Bond Lending",
+  "research_question": "How can tokenized collateral, LTV boundaries, and protocol invariants be made inspectable through deterministic simulation?",
+  "role": "Flagship RWA lending protocol and risk-simulation project.",
+  "schema_version": "0.1.0",
+  "screenshots": [
+    {
+      "available": false,
+      "evidence_id": null,
+      "label": "Protocol interface",
+      "note": "No approved screenshot was selected for the v0.1 evidence snapshot.",
+      "screenshot_id": "gbl-interface-missing"
+    }
+  ],
+  "summary": "Green Bond Lending models lending against tokenized green-bond collateral with explicit state and risk boundaries."
+}

@@ -1,0 +1,52 @@
+{
+  "course_code": "T150",
+  "excluded_volatile_fields": [
+    "application deadlines",
+    "fees",
+    "contact names",
+    "scholarship values",
+    "rankings",
+    "admission likelihood"
+  ],
+  "facts": [
+    {
+      "fact_id": "ucd-negotiated-path",
+      "fit_tags": [
+        "customisable-path",
+        "computing-breadth"
+      ],
+      "source_ids": [
+        "ucd-official-course"
+      ],
+      "text": "The programme uses a negotiated-learning model that allows students to tailor a computing pathway to prior experience and career goals."
+    },
+    {
+      "fact_id": "ucd-machine-learning-options",
+      "fit_tags": [
+        "machine-learning",
+        "data-systems"
+      ],
+      "source_ids": [
+        "ucd-official-course"
+      ],
+      "text": "The official description includes machine learning, data mining, programming, and information visualisation among its computing options."
+    }
+  ],
+  "institution": "University College Dublin",
+  "official_sources": [
+    {
+      "kind": "official-webpage",
+      "locator": "https://hub.ucd.ie/usis/%21W_HU_MENU.P_PUBLISH?MAJR=T150&p_tag=PROG",
+      "note": "Official programme page; details require pre-submission refresh.",
+      "sha256": null,
+      "source_id": "ucd-official-course",
+      "verified_on": "2026-07-24",
+      "volatile": true
+    }
+  ],
+  "programme_id": "ucd",
+  "programme_name": "MSc Computer Science (Negotiated Learning)",
+  "refresh_required": true,
+  "schema_version": "0.1.0",
+  "verified_on": "2026-07-24"
+}

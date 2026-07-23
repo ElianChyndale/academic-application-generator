@@ -1,0 +1,193 @@
+{
+  "$defs": {
+    "ProgrammeFact": {
+      "additionalProperties": false,
+      "properties": {
+        "fact_id": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "title": "Fact Id",
+          "type": "string"
+        },
+        "fit_tags": {
+          "items": {
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Fit Tags",
+          "type": "array"
+        },
+        "source_ids": {
+          "items": {
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Ids",
+          "type": "array"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "fact_id",
+        "text",
+        "source_ids",
+        "fit_tags"
+      ],
+      "title": "ProgrammeFact",
+      "type": "object"
+    },
+    "ProgrammeId": {
+      "enum": [
+        "ucd",
+        "galway",
+        "ul"
+      ],
+      "title": "ProgrammeId",
+      "type": "string"
+    },
+    "SourceKind": {
+      "enum": [
+        "tagged-repository",
+        "official-webpage",
+        "public-profile"
+      ],
+      "title": "SourceKind",
+      "type": "string"
+    },
+    "SourceRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "$ref": "#/$defs/SourceKind"
+        },
+        "locator": {
+          "minLength": 1,
+          "title": "Locator",
+          "type": "string"
+        },
+        "note": {
+          "minLength": 1,
+          "title": "Note",
+          "type": "string"
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sha256"
+        },
+        "source_id": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "title": "Source Id",
+          "type": "string"
+        },
+        "verified_on": {
+          "format": "date",
+          "title": "Verified On",
+          "type": "string"
+        },
+        "volatile": {
+          "title": "Volatile",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "source_id",
+        "kind",
+        "locator",
+        "verified_on",
+        "volatile",
+        "note"
+      ],
+      "title": "SourceRecord",
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "course_code": {
+      "minLength": 1,
+      "title": "Course Code",
+      "type": "string"
+    },
+    "excluded_volatile_fields": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 4,
+      "title": "Excluded Volatile Fields",
+      "type": "array"
+    },
+    "facts": {
+      "items": {
+        "$ref": "#/$defs/ProgrammeFact"
+      },
+      "minItems": 2,
+      "title": "Facts",
+      "type": "array"
+    },
+    "institution": {
+      "minLength": 1,
+      "title": "Institution",
+      "type": "string"
+    },
+    "official_sources": {
+      "items": {
+        "$ref": "#/$defs/SourceRecord"
+      },
+      "minItems": 1,
+      "title": "Official Sources",
+      "type": "array"
+    },
+    "programme_id": {
+      "$ref": "#/$defs/ProgrammeId"
+    },
+    "programme_name": {
+      "minLength": 1,
+      "title": "Programme Name",
+      "type": "string"
+    },
+    "refresh_required": {
+      "const": true,
+      "default": true,
+      "title": "Refresh Required",
+      "type": "boolean"
+    },
+    "schema_version": {
+      "const": "0.1.0",
+      "default": "0.1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "verified_on": {
+      "const": "2026-07-24",
+      "default": "2026-07-24",
+      "title": "Verified On",
+      "type": "string"
+    }
+  },
+  "required": [
+    "programme_id",
+    "institution",
+    "programme_name",
+    "course_code",
+    "official_sources",
+    "facts",
+    "excluded_volatile_fields"
+  ],
+  "title": "ProgrammeProfile",
+  "type": "object"
+}

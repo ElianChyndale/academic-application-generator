@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "blocks": {
+      "minimum": 0,
+      "title": "Blocks",
+      "type": "integer"
+    },
+    "claims_used": {
+      "minimum": 0,
+      "title": "Claims Used",
+      "type": "integer"
+    },
+    "issues": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Issues",
+      "type": "array"
+    },
+    "materials": {
+      "minimum": 0,
+      "title": "Materials",
+      "type": "integer"
+    },
+    "passed": {
+      "title": "Passed",
+      "type": "boolean"
+    },
+    "profiles": {
+      "minimum": 0,
+      "title": "Profiles",
+      "type": "integer"
+    },
+    "programmes": {
+      "minimum": 0,
+      "title": "Programmes",
+      "type": "integer"
+    },
+    "schema_version": {
+      "const": "0.1.0",
+      "default": "0.1.0",
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "profiles",
+    "programmes",
+    "materials",
+    "blocks",
+    "claims_used",
+    "passed"
+  ],
+  "title": "ValidationSummary",
+  "type": "object"
+}

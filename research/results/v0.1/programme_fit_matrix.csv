@@ -1,0 +1,7 @@
+programme_id,programme_name,programme_fact_id,fit_tags,source_ids
+galway,MSc Computer Science—Artificial Intelligence,galway-core-ai,machine-learning|retrieval|responsible-ai|agents,galway-official-course
+galway,MSc Computer Science—Artificial Intelligence,galway-knowledge-systems,knowledge-graphs|research-project,galway-official-course
+ucd,MSc Computer Science (Negotiated Learning),ucd-negotiated-path,customisable-path|computing-breadth,ucd-official-course
+ucd,MSc Computer Science (Negotiated Learning),ucd-machine-learning-options,machine-learning|data-systems,ucd-official-course
+ul,MSc Artificial Intelligence & Machine Learning,ul-applied-ml,applied-machine-learning|evaluation|data-systems,ul-official-ml-module
+ul,MSc Artificial Intelligence & Machine Learning,ul-independent-project,research-project|methodology|responsible-ai,ul-official-project-module

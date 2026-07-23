@@ -1,0 +1,166 @@
+{
+  "$defs": {
+    "MaterialBlock": {
+      "additionalProperties": false,
+      "properties": {
+        "block_id": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "title": "Block Id",
+          "type": "string"
+        },
+        "claim_ids": {
+          "items": {
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "type": "string"
+          },
+          "title": "Claim Ids",
+          "type": "array"
+        },
+        "heading": {
+          "minLength": 1,
+          "title": "Heading",
+          "type": "string"
+        },
+        "numeric_fact_ids": {
+          "items": {
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "type": "string"
+          },
+          "title": "Numeric Fact Ids",
+          "type": "array"
+        },
+        "programme_fact_ids": {
+          "items": {
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "type": "string"
+          },
+          "title": "Programme Fact Ids",
+          "type": "array"
+        },
+        "temporal_mode": {
+          "$ref": "#/$defs/TemporalMode"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "block_id",
+        "heading",
+        "text",
+        "temporal_mode"
+      ],
+      "title": "MaterialBlock",
+      "type": "object"
+    },
+    "MaterialKind": {
+      "enum": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "title": "MaterialKind",
+      "type": "string"
+    },
+    "ProgrammeId": {
+      "enum": [
+        "ucd",
+        "galway",
+        "ul"
+      ],
+      "title": "ProgrammeId",
+      "type": "string"
+    },
+    "TemporalMode": {
+      "enum": [
+        "past",
+        "present",
+        "future",
+        "neutral"
+      ],
+      "title": "TemporalMode",
+      "type": "string"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "const": "2026-07-24",
+      "default": "2026-07-24",
+      "title": "As Of",
+      "type": "string"
+    },
+    "blocks": {
+      "items": {
+        "$ref": "#/$defs/MaterialBlock"
+      },
+      "minItems": 1,
+      "title": "Blocks",
+      "type": "array"
+    },
+    "candidate_id": {
+      "const": "yuxin-chen",
+      "default": "yuxin-chen",
+      "title": "Candidate Id",
+      "type": "string"
+    },
+    "kind": {
+      "$ref": "#/$defs/MaterialKind"
+    },
+    "material_id": {
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "title": "Material Id",
+      "type": "string"
+    },
+    "programme_id": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ProgrammeId"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "review_status": {
+      "const": "draft-human-verification-required",
+      "default": "draft-human-verification-required",
+      "title": "Review Status",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "0.1.0",
+      "default": "0.1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "title": {
+      "minLength": 1,
+      "title": "Title",
+      "type": "string"
+    }
+  },
+  "required": [
+    "material_id",
+    "kind",
+    "title",
+    "blocks"
+  ],
+  "title": "GeneratedMaterial",
+  "type": "object"
+}

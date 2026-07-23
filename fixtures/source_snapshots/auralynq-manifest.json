@@ -1,0 +1,417 @@
+{
+  "architecture_edges": [
+    {
+      "label": "update",
+      "source": "events",
+      "target": "memory"
+    },
+    {
+      "label": "analyze",
+      "source": "events",
+      "target": "analytics"
+    },
+    {
+      "label": "prioritize",
+      "source": "memory",
+      "target": "review"
+    },
+    {
+      "label": "present",
+      "source": "review",
+      "target": "cockpit"
+    }
+  ],
+  "architecture_nodes": [
+    {
+      "label": "Learning events",
+      "node_id": "events",
+      "role": "Attempt evidence"
+    },
+    {
+      "label": "Knowledge memory",
+      "node_id": "memory",
+      "role": "Local state"
+    },
+    {
+      "label": "Learning analytics",
+      "node_id": "analytics",
+      "role": "Diagnosis"
+    },
+    {
+      "label": "Review strategy",
+      "node_id": "review",
+      "role": "Selection"
+    },
+    {
+      "label": "Web cockpit",
+      "node_id": "cockpit",
+      "role": "Human interaction"
+    }
+  ],
+  "claims": [
+    {
+      "approved_text": "The repository implements local knowledge-memory and learning-analytics components for attempt-driven review.",
+      "category": "learning-analytics",
+      "claim_id": "auralynq-memory",
+      "evidence_ids": [
+        "auralynq-memory-code",
+        "auralynq-analytics-code"
+      ],
+      "limitations": [
+        "Implementation does not establish educational efficacy."
+      ],
+      "numeric_assertions": [],
+      "prohibited_expansions": [
+        "proven learning gains",
+        "validated psychometric model"
+      ],
+      "state": "implemented",
+      "title": "Local knowledge-memory implementation"
+    },
+    {
+      "approved_text": "A deterministic local benchmark records 320 synthetic learning events across review strategies with seed 42.",
+      "category": "recommendation",
+      "claim_id": "auralynq-review-strategies",
+      "evidence_ids": [
+        "auralynq-review-result",
+        "auralynq-review-table"
+      ],
+      "limitations": [
+        "The benchmark contains synthetic traces, not learner outcomes."
+      ],
+      "numeric_assertions": [
+        {
+          "evidence_id": "auralynq-review-result",
+          "meaning": "synthetic event count",
+          "token": "320"
+        },
+        {
+          "evidence_id": "auralynq-review-result",
+          "meaning": "fixed simulation seed",
+          "token": "42"
+        }
+      ],
+      "prohibited_expansions": [
+        "improves exam scores",
+        "personalized learning proven"
+      ],
+      "state": "experimentally-supported",
+      "title": "Review-strategy simulation"
+    },
+    {
+      "approved_text": "The research artifacts record confidence-calibration behavior on a synthetic learning trace.",
+      "category": "calibration",
+      "claim_id": "auralynq-calibration",
+      "evidence_ids": [
+        "auralynq-calibration-result"
+      ],
+      "limitations": [
+        "The trace is synthetic and does not represent a learner population."
+      ],
+      "numeric_assertions": [],
+      "prohibited_expansions": [
+        "calibrated for all learners",
+        "clinical-grade measurement"
+      ],
+      "state": "experimentally-supported",
+      "title": "Calibration evidence"
+    },
+    {
+      "approved_text": "The targeted review-strategy simulation passed its captured offline research tests.",
+      "category": "reproducibility",
+      "claim_id": "auralynq-review-validation",
+      "evidence_ids": [
+        "auralynq-review-code",
+        "auralynq-review-result",
+        "auralynq-research-test"
+      ],
+      "limitations": [
+        "The command did not run browser or full backend tests."
+      ],
+      "numeric_assertions": [],
+      "prohibited_expansions": [
+        "fully tested application",
+        "production reliability"
+      ],
+      "state": "validated",
+      "title": "Targeted simulation tests"
+    },
+    {
+      "approved_text": "A web-cockpit test file and captured screenshot show an implemented interface surface, without proving the complete workflow.",
+      "category": "interface",
+      "claim_id": "auralynq-cockpit",
+      "evidence_ids": [
+        "auralynq-web-test",
+        "auralynq-cockpit-shot"
+      ],
+      "limitations": [
+        "The browser test was not run in the captured verification command."
+      ],
+      "numeric_assertions": [],
+      "prohibited_expansions": [
+        "fully validated frontend",
+        "production user experience"
+      ],
+      "state": "prototype-only",
+      "title": "Web cockpit evidence"
+    },
+    {
+      "approved_text": "Planned: evaluate the review loop with consented longitudinal learner data and predeclared outcome measures.",
+      "category": "future-work",
+      "claim_id": "auralynq-user-efficacy",
+      "evidence_ids": [
+        "auralynq-user-study-plan"
+      ],
+      "limitations": [
+        "No real-learner efficacy result exists."
+      ],
+      "numeric_assertions": [],
+      "prohibited_expansions": [
+        "demonstrated exam improvement",
+        "population-level finding"
+      ],
+      "state": "planned",
+      "title": "Learner efficacy"
+    }
+  ],
+  "demo_steps": [
+    "Show how a learning event enters the local evidence model.",
+    "Trace the event into knowledge memory and review prioritization.",
+    "Inspect the deterministic review-strategy result table.",
+    "Explain why the screenshot and synthetic trace do not prove efficacy."
+  ],
+  "evidence": [
+    {
+      "evidence_id": "auralynq-readme",
+      "kind": "technical-report",
+      "limitation": "Project overview is not independent evaluation.",
+      "project_id": "auralynq",
+      "scope": "workspace-implementation-evidence",
+      "source_path": "README.md",
+      "source_sha256": "fdf601f5c70c8fea76d8c7cd2f3a4fa316460911089bcc7916e58db98ab2a673",
+      "synthetic": false,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "auralynq-memory-code",
+      "kind": "source-code",
+      "limitation": "Implementation presence does not establish learning efficacy.",
+      "project_id": "auralynq",
+      "scope": "workspace-implementation-evidence",
+      "source_path": "packages/study-science/src/study_science/knowledge_memory.py",
+      "source_sha256": "c749fa3a7d6c2f2d80c5e332410e108a3793e2d32842cde08a97484571d4300d",
+      "synthetic": false,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "auralynq-analytics-code",
+      "kind": "source-code",
+      "limitation": "Local analytics logic is not a validated psychometric model.",
+      "project_id": "auralynq",
+      "scope": "workspace-implementation-evidence",
+      "source_path": "packages/study-science/src/study_science/learning_analytics.py",
+      "source_sha256": "024c819092dbff49b8ffd5cd991646a62f34a90669377c53b3892f77a318297e",
+      "synthetic": false,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "auralynq-review-code",
+      "kind": "source-code",
+      "limitation": "Bounded review workflow implementation.",
+      "project_id": "auralynq",
+      "scope": "workspace-implementation-evidence",
+      "source_path": "packages/study-science/src/study_science/review_lab.py",
+      "source_sha256": "888a834113119aa6a789a14dc6e3ded654acb941bb5d6231e980f6e7d083e68b",
+      "synthetic": false,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "auralynq-review-result",
+      "kind": "experiment-result",
+      "limitation": "Synthetic deterministic benchmark, not a learner study.",
+      "project_id": "auralynq",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "research/results/review_strategy_summary.json",
+      "source_sha256": "c851a9793f316dd864a4b834ad0aefb4dbfca3f827f0a744144c767e7ad3e813",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "auralynq-review-table",
+      "kind": "experiment-result",
+      "limitation": "Synthetic strategy records only.",
+      "project_id": "auralynq",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "research/results/review_strategy_eval.csv",
+      "source_sha256": "86a0b884610216ec35fee9a1f2f5e945944306c29c69185670f38cac7b738de9",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "auralynq-calibration-result",
+      "kind": "experiment-result",
+      "limitation": "Synthetic confidence and correctness records.",
+      "project_id": "auralynq",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "research/results/calibration_eval.csv",
+      "source_sha256": "94d095576d4be626fcd93a15d0f00eca225dea22081f9744c7c411d9c59e1e5f",
+      "synthetic": true,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "auralynq-research-test",
+      "kind": "test",
+      "limitation": "Covers review-strategy simulation, not the full product.",
+      "project_id": "auralynq",
+      "scope": "deterministic-local-or-synthetic",
+      "source_path": "research/tests/test_review_strategy_simulation.py",
+      "source_sha256": "e8f59f982b01db95b56617d1e275a60833c35eb4031392ead18d3496a0aa0e64",
+      "synthetic": true,
+      "verification_run_id": "auralynq-research-tests"
+    },
+    {
+      "evidence_id": "auralynq-web-test",
+      "kind": "test",
+      "limitation": "Test file was inspected but not run in the captured command.",
+      "project_id": "auralynq",
+      "scope": "workspace-implementation-evidence",
+      "source_path": "apps/web/tests/top-navigation.spec.ts",
+      "source_sha256": "107587add90d0e18718836c45104485033cc4a390368f9d43466e55de04e7df9",
+      "synthetic": false,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "auralynq-cockpit-shot",
+      "kind": "screenshot",
+      "limitation": "Visual state only; it does not prove backend behavior.",
+      "project_id": "auralynq",
+      "scope": "workspace-implementation-evidence",
+      "source_path": "evidence/screenshots/1780249603-test.png",
+      "source_sha256": "6b7fa434f92a8b80aab02d9bf1a12e49ffcae424e4013a1c4f68b67e3d2bbcd0",
+      "synthetic": false,
+      "verification_run_id": null
+    },
+    {
+      "evidence_id": "auralynq-user-study-plan",
+      "kind": "plan",
+      "limitation": "Future real-learner validation is not completed.",
+      "project_id": "auralynq",
+      "scope": "workspace-implementation-evidence",
+      "source_path": "README.md",
+      "source_sha256": "fdf601f5c70c8fea76d8c7cd2f3a4fa316460911089bcc7916e58db98ab2a673",
+      "synthetic": false,
+      "verification_run_id": null
+    }
+  ],
+  "failure_cases": [
+    "Synthetic learner traces can encode unrealistic behavior.",
+    "Confidence may be miscalibrated despite useful ranking signals.",
+    "A recommendation can be explainable but pedagogically weak.",
+    "A visible cockpit may not reflect backend or persistence failures."
+  ],
+  "flagship_position": 2,
+  "interview": [
+    {
+      "answer": "The repository implements local knowledge-memory and learning-analytics components for attempt-driven review. Limitation: Implementation does not establish educational efficacy.",
+      "claim_ids": [
+        "auralynq-memory"
+      ],
+      "question": "What evidence supports: Local knowledge-memory implementation?"
+    },
+    {
+      "answer": "A deterministic local benchmark records 320 synthetic learning events across review strategies with seed 42. Limitation: The benchmark contains synthetic traces, not learner outcomes.",
+      "claim_ids": [
+        "auralynq-review-strategies"
+      ],
+      "question": "What evidence supports: Review-strategy simulation?"
+    },
+    {
+      "answer": "The research artifacts record confidence-calibration behavior on a synthetic learning trace. Limitation: The trace is synthetic and does not represent a learner population.",
+      "claim_ids": [
+        "auralynq-calibration"
+      ],
+      "question": "What evidence supports: Calibration evidence?"
+    },
+    {
+      "answer": "The targeted review-strategy simulation passed its captured offline research tests. Limitation: The command did not run browser or full backend tests.",
+      "claim_ids": [
+        "auralynq-review-validation"
+      ],
+      "question": "What evidence supports: Targeted simulation tests?"
+    },
+    {
+      "answer": "A web-cockpit test file and captured screenshot show an implemented interface surface, without proving the complete workflow. Limitation: The browser test was not run in the captured verification command.",
+      "claim_ids": [
+        "auralynq-cockpit"
+      ],
+      "question": "What evidence supports: Web cockpit evidence?"
+    },
+    {
+      "answer": "Planned: evaluate the review loop with consented longitudinal learner data and predeclared outcome measures. Limitation: No real-learner efficacy result exists.",
+      "claim_ids": [
+        "auralynq-user-efficacy"
+      ],
+      "question": "What evidence supports: Learner efficacy?"
+    },
+    {
+      "answer": "The research traces are synthetic; no longitudinal learner outcome, exam improvement, or population-level efficacy claim is supported.",
+      "claim_ids": [
+        "auralynq-user-efficacy"
+      ],
+      "question": "What is the most important boundary of this dossier?"
+    }
+  ],
+  "limitations": [
+    "No consented longitudinal learner dataset was evaluated.",
+    "No exam-score improvement or causal learning effect is claimed.",
+    "The captured verification command excludes browser and full-stack tests.",
+    "Calibration artifacts use synthetic traces."
+  ],
+  "narratives": [
+    {
+      "claim_ids": [
+        "auralynq-memory",
+        "auralynq-review-strategies",
+        "auralynq-calibration",
+        "auralynq-cockpit"
+      ],
+      "target_words": 100,
+      "text": "Auralynq is a local-first learning-intelligence system that organizes attempt evidence into diagnosis and review workflows. The inspected code models knowledge memory and learning analytics, while deterministic fixtures compare review strategies and record calibration behavior. The targeted research simulation tests passed, and a captured web screenshot provides limited visual evidence of an implemented surface. The research traces are synthetic; no longitudinal learner outcome, exam improvement, or population-level efficacy claim is supported. The evidence is frozen by relative path and SHA-256, and each statement keeps a visible boundary between implementation, scoped verification, local results, prototypes, and future work."
+    },
+    {
+      "claim_ids": [
+        "auralynq-memory",
+        "auralynq-review-strategies",
+        "auralynq-calibration",
+        "auralynq-cockpit"
+      ],
+      "target_words": 250,
+      "text": "Auralynq is a local-first learning-intelligence system that organizes attempt evidence into diagnosis and review workflows. Study decisions are often fragmented across mistakes, timing, confidence, topic recurrence, and overdue review state.\n\nThe inspected code models knowledge memory and learning analytics, while deterministic fixtures compare review strategies and record calibration behavior. Learning events feed local memory and analytics, which inform review selection and the web cockpit.\n\nThe targeted research simulation tests passed, and a captured web screenshot provides limited visual evidence of an implemented surface. A demo should follow one attempt through diagnosis, memory update, and review selection, then inspect the synthetic strategy comparison.\n\nEvidence is governed at claim level. Source files establish that a method or interface exists; passed targeted checks support only their named behavior; deterministic artifacts support only local observations. Prototype and planned items remain visibly separate. Relative paths and content hashes make the inspected snapshot reviewable without copying source code into this repository. Failure cases, missing checks, and absent screenshots stay in the record so the portfolio copy does not turn an evidence gap into a positive result. Each description points back to approved claims rather than introducing new capabilities or metrics.\n\nThe research traces are synthetic; no longitudinal learner outcome, exam improvement, or population-level efficacy claim is supported."
+    },
+    {
+      "claim_ids": [
+        "auralynq-memory",
+        "auralynq-review-strategies",
+        "auralynq-calibration",
+        "auralynq-cockpit"
+      ],
+      "target_words": 500,
+      "text": "Auralynq is a local-first learning-intelligence system that organizes attempt evidence into diagnosis and review workflows. Study decisions are often fragmented across mistakes, timing, confidence, topic recurrence, and overdue review state. The defensible contribution is the explicit learning-evidence loop and its reproducible local evaluation, not automated educational success.\n\nThe inspected code models knowledge memory and learning analytics, while deterministic fixtures compare review strategies and record calibration behavior. Learning events feed local memory and analytics, which inform review selection and the web cockpit.\n\nThe dossier separates implementation evidence, test evidence, and local experimental artifacts so that each statement can be traced to a specific inspected file. It also records failure cases and missing evidence instead of treating absence as success.\n\nThe targeted research simulation tests passed, and a captured web screenshot provides limited visual evidence of an implemented surface. A demo should follow one attempt through diagnosis, memory update, and review selection, then inspect the synthetic strategy comparison.\n\nFor an interview or research discussion, the project is presented as a bounded engineering contribution: a decision problem was translated into data structures, deterministic methods, checks, and reviewable outputs. The strongest evidence is named directly, while broader deployment or impact questions remain open.\n\nThis framing supports honest comparison across the portfolio. Source code shows what exists, targeted checks show what passed in the captured environment, and result artifacts support only the local observations stated in their scope.\n\nThe practical value of this dossier is traceability. A reviewer can move from a concise public description to a stable claim identifier, then to one or more evidence records and the frozen hash of each inspected source file. Numeric statements receive their own evidence links, which reduces the risk that a precise-looking metric is detached from its fixture or test scope. Verification commands are recorded with pass counts and limitations. A failed attempt or missing dependency is retained instead of being summarized as success. Architecture diagrams and demo steps are therefore presentation aids rather than additional proof. The dossier does not infer external impact, security, deployment quality, or user outcomes. Future evaluation should refresh source hashes, rerun the relevant checks in a declared environment, and add independent evidence only when it exists. Until then, the approved wording remains deliberately bounded to what this snapshot can support. This structure also makes later evidence refreshes explicit, comparable, and suitable for careful review.\n\nThe research traces are synthetic; no longitudinal learner outcome, exam improvement, or population-level efficacy claim is supported."
+    }
+  ],
+  "project_id": "auralynq",
+  "public_name": "Auralynq",
+  "research_question": "How can local learning events, confidence, recurrence, and review state drive transparent study recommendations?",
+  "role": "Flagship learning-intelligence and active-review system.",
+  "schema_version": "0.1.0",
+  "screenshots": [
+    {
+      "available": true,
+      "evidence_id": "auralynq-cockpit-shot",
+      "label": "Learning cockpit state",
+      "note": "Captured workspace screenshot; visual evidence only.",
+      "screenshot_id": "auralynq-cockpit"
+    }
+  ],
+  "summary": "Auralynq is a local-first learning-intelligence system that organizes attempt evidence into diagnosis and review workflows."
+}

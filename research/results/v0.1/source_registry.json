@@ -1,0 +1,91 @@
+{
+  "profile_sources": [
+    {
+      "kind": "tagged-repository",
+      "locator": "https://github.com/ElianChyndale/project-evidence-dossiers/blob/v0.1.0/dossiers/ecoquant/manifest.json",
+      "note": "Frozen from the public v0.1.0 evidence-dossier release.",
+      "sha256": "0e2fd58de1878b3a5594fa1167a38ff915a2c3a403edd931048d1a865147dbe3",
+      "source_id": "ecoquant-dossier",
+      "verified_on": "2026-07-24",
+      "volatile": false
+    },
+    {
+      "kind": "tagged-repository",
+      "locator": "https://github.com/ElianChyndale/project-evidence-dossiers/blob/v0.1.0/dossiers/auralynq/manifest.json",
+      "note": "Frozen from the public v0.1.0 evidence-dossier release.",
+      "sha256": "9a6821a23e107daaac1b82c908c158660c7f0ea610e14508bb13f86a6f9af0d1",
+      "source_id": "auralynq-dossier",
+      "verified_on": "2026-07-24",
+      "volatile": false
+    },
+    {
+      "kind": "tagged-repository",
+      "locator": "https://github.com/ElianChyndale/project-evidence-dossiers/blob/v0.1.0/dossiers/green-bond-lending/manifest.json",
+      "note": "Frozen from the public v0.1.0 evidence-dossier release.",
+      "sha256": "804ae88eb0bf9ced7bf1285a378c12bc4bbb7ccf8045c647d883f1b3c09b7df3",
+      "source_id": "green-bond-lending-dossier",
+      "verified_on": "2026-07-24",
+      "volatile": false
+    },
+    {
+      "kind": "tagged-repository",
+      "locator": "https://github.com/ElianChyndale/project-evidence-dossiers/blob/v0.1.0/dossiers/ai-research-engineering-lab/manifest.json",
+      "note": "Frozen from the public v0.1.0 evidence-dossier release.",
+      "sha256": "9b33877e106aae07a8ae06c660e5e65476167184a96ba5a251ac40d5751e5d6d",
+      "source_id": "ai-research-engineering-lab-dossier",
+      "verified_on": "2026-07-24",
+      "volatile": false
+    },
+    {
+      "kind": "public-profile",
+      "locator": "fixtures/source_snapshots/public-profile.md",
+      "note": "Frozen public portfolio profile; private academic records are excluded.",
+      "sha256": "de2b91974424e847fa1f6a4a66dbbf24db59180ebda5f17652993b1b547ec2c4",
+      "source_id": "public-research-profile",
+      "verified_on": "2026-07-24",
+      "volatile": false
+    }
+  ],
+  "programme_sources": [
+    {
+      "kind": "official-webpage",
+      "locator": "https://www.universityofgalway.ie/courses/taught-postgraduate-courses/computer-science-artificial-intelligence.html",
+      "note": "Official programme page; curriculum may change.",
+      "programme_id": "galway",
+      "sha256": null,
+      "source_id": "galway-official-course",
+      "verified_on": "2026-07-24",
+      "volatile": true
+    },
+    {
+      "kind": "official-webpage",
+      "locator": "https://hub.ucd.ie/usis/%21W_HU_MENU.P_PUBLISH?MAJR=T150&p_tag=PROG",
+      "note": "Official programme page; details require pre-submission refresh.",
+      "programme_id": "ucd",
+      "sha256": null,
+      "source_id": "ucd-official-course",
+      "verified_on": "2026-07-24",
+      "volatile": true
+    },
+    {
+      "kind": "official-webpage",
+      "locator": "https://bookofmodules.ul.ie/Default.aspx?ModuleCodeParameter=%7CCE4051%7C",
+      "note": "Official module record linked to the programme.",
+      "programme_id": "ul",
+      "sha256": null,
+      "source_id": "ul-official-ml-module",
+      "verified_on": "2026-07-24",
+      "volatile": true
+    },
+    {
+      "kind": "official-webpage",
+      "locator": "https://bookofmodules.ul.ie/Default.aspx?ModuleCodeParameter=%7CCS6143%7C",
+      "note": "Official AI and machine-learning project module record.",
+      "programme_id": "ul",
+      "sha256": null,
+      "source_id": "ul-official-project-module",
+      "verified_on": "2026-07-24",
+      "volatile": true
+    }
+  ]
+}

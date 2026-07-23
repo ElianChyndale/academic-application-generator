@@ -1,0 +1,63 @@
+{
+  "course_code": "MSAIMLTFA",
+  "excluded_volatile_fields": [
+    "application deadlines",
+    "fees",
+    "contact names",
+    "scholarship values",
+    "rankings",
+    "admission likelihood"
+  ],
+  "facts": [
+    {
+      "fact_id": "ul-applied-ml",
+      "fit_tags": [
+        "applied-machine-learning",
+        "evaluation",
+        "data-systems"
+      ],
+      "source_ids": [
+        "ul-official-ml-module"
+      ],
+      "text": "Official programme-linked modules emphasise data engineering, machine-learning implementation, evaluation, visualisation, and potential data bias."
+    },
+    {
+      "fact_id": "ul-independent-project",
+      "fit_tags": [
+        "research-project",
+        "methodology",
+        "responsible-ai"
+      ],
+      "source_ids": [
+        "ul-official-project-module"
+      ],
+      "text": "The official AI and machine-learning project module emphasises independent research, methodology, analysis, ethical concerns, and professional presentation."
+    }
+  ],
+  "institution": "University of Limerick",
+  "official_sources": [
+    {
+      "kind": "official-webpage",
+      "locator": "https://bookofmodules.ul.ie/Default.aspx?ModuleCodeParameter=%7CCE4051%7C",
+      "note": "Official module record linked to the programme.",
+      "sha256": null,
+      "source_id": "ul-official-ml-module",
+      "verified_on": "2026-07-24",
+      "volatile": true
+    },
+    {
+      "kind": "official-webpage",
+      "locator": "https://bookofmodules.ul.ie/Default.aspx?ModuleCodeParameter=%7CCS6143%7C",
+      "note": "Official AI and machine-learning project module record.",
+      "sha256": null,
+      "source_id": "ul-official-project-module",
+      "verified_on": "2026-07-24",
+      "volatile": true
+    }
+  ],
+  "programme_id": "ul",
+  "programme_name": "MSc Artificial Intelligence & Machine Learning",
+  "refresh_required": true,
+  "schema_version": "0.1.0",
+  "verified_on": "2026-07-24"
+}
