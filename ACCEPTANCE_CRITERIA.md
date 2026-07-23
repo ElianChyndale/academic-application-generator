@@ -31,9 +31,9 @@
 
 - [x] `validate`, `generate`, `audit`, `export`, and `report` pass.
 - [x] Pytest, Ruff, and strict mypy pass.
-- [ ] CI passes on Ubuntu/Windows with Python 3.11/3.12.
-- [ ] Public repository and `v0.1.0` tag point to the final validated commit.
-- [ ] The portfolio task log records commands, CI, URL, and remaining risks.
+- [x] CI passes on Ubuntu/Windows with Python 3.11/3.12.
+- [x] Public repository and `v0.1.0` tag point to the final validated commit.
+- [x] The portfolio task log records commands, CI, URL, and remaining risks.
 
 ## Release commands
 
