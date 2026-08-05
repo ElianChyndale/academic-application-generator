@@ -34,7 +34,8 @@ def test_valid_release_passes(
     assert summary.passed
     assert summary.materials == 26
     assert summary.blocks == 80
-    assert summary.claims_used == 22
+    # 29 after the E0-E8 research programme claims were added to the profile.
+    assert summary.claims_used == 29
 
 
 def test_input_source_hash_drift_fails(

@@ -49,16 +49,25 @@ _PROGRAMME_PROJECTS = {
         "ecoquant-docintel",
         "ecoquant-valuation",
         "ai-lab-runners",
+        "programme-research-question",
+        "programme-e1-retrieval",
+        "programme-e5-calibration",
     ),
     ProgrammeId.GALWAY: (
         "ecoquant-docintel",
         "auralynq-memory",
         "ai-lab-results",
+        "programme-research-question",
+        "programme-e2-table",
+        "programme-e7-commercial",
     ),
     ProgrammeId.UL: (
         "ecoquant-valuation",
         "gbl-threshold",
         "ai-lab-runners",
+        "programme-research-question",
+        "programme-e3-temporal",
+        "programme-e4-verification",
     ),
 }
 _PROGRAMME_FUTURE = {

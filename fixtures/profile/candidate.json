@@ -735,6 +735,270 @@
       ],
       "state": "profile-fact",
       "text": "The public portfolio demonstrates Python, TypeScript, Solidity, retrieval evaluation, risk simulation, technical writing, and reproducibility practices."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "research-programme",
+      "claim_id": "programme-research-question",
+      "limitation": "Internal research on public data; not externally validated.",
+      "project_id": "ecoquant",
+      "source_ids": [
+        "ecoquant-dossier",
+        "programme-overview"
+      ],
+      "state": "experimentally-supported",
+      "text": "I designed a multi-experiment research programme (E0 through E8) around one central question: how retrieval, table reasoning, temporal contradiction handling, verification, calibration, and human oversight combine for reliable financial document intelligence."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "retrieval",
+      "claim_id": "programme-e1-retrieval",
+      "limitation": "Two datasets; reranker baseline blocked by external asset.",
+      "project_id": "ecoquant",
+      "source_ids": [
+        "ecoquant-dossier",
+        "e1-retrieval"
+      ],
+      "state": "experimentally-supported",
+      "text": "On the FinanceBench public sample of real 10-K questions, dense retrieval achieved higher Recall-at-K than sparse and long-context baselines, with company-clustered bootstrap confidence intervals; method preference reversed across datasets."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "table-reasoning",
+      "claim_id": "programme-e2-table",
+      "limitation": "GRI-QA quant subset only.",
+      "project_id": "ecoquant",
+      "source_ids": [
+        "ecoquant-dossier",
+        "e2-table"
+      ],
+      "state": "experimentally-supported",
+      "text": "Separating deterministic calculation from retrieval answered nearly all of the real environmental-table questions within one percent when the correct table was known; retrieval error, not calculation error, dominated mistakes."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "temporal",
+      "claim_id": "programme-e3-temporal",
+      "limitation": "Three companies; small amended-filing class.",
+      "project_id": "ecoquant",
+      "source_ids": [
+        "ecoquant-dossier",
+        "e3-temporal"
+      ],
+      "state": "experimentally-supported",
+      "text": "On SEC EDGAR XBRL facts, source-time filtering eliminated future information and valid-time filtering eliminated expired evidence; restatement-aware retrieval substantially improved contradiction detection."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "verification",
+      "claim_id": "programme-e4-verification",
+      "limitation": "Benchmark of 60 cases; no LLM verifier.",
+      "project_id": "ecoquant",
+      "source_ids": [
+        "ecoquant-dossier",
+        "e4-verification"
+      ],
+      "state": "experimentally-supported",
+      "text": "A multi-layer deterministic verifier rejected every injected ungrounded number (zero false-pass rate) with scale-normalized matching; presence-based verification is bounded because most financial answers are derived values, not extracted ones."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "calibration",
+      "claim_id": "programme-e5-calibration",
+      "limitation": "FinanceBench only; correctness = top-1 hit.",
+      "project_id": "ecoquant",
+      "source_ids": [
+        "ecoquant-dossier",
+        "e5-calibration"
+      ],
+      "state": "experimentally-supported",
+      "text": "Retrieval confidence separated correct from incorrect predictions with high AUROC; at high supported-answer precision, only a small fraction of cases could be auto-accepted \u2014 calibration certifies precision but does not create it."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "commercial-analysis",
+      "claim_id": "programme-e7-commercial",
+      "limitation": "Public-data track only; simplified ratio conventions.",
+      "project_id": "ecoquant",
+      "source_ids": [
+        "ecoquant-dossier",
+        "e7-commercial"
+      ],
+      "state": "experimentally-supported",
+      "text": "The evidence-to-decision method generalized to commercial analysis: multiple companies across four domains analyzed from raw SEC XBRL with source-linked margins, FCFF, ROIC, and explicit fact/inference/assumption separation; values matched public financials."
+    },
+    {
+      "allowed_materials": [
+        "industry-cv",
+        "academic-cv",
+        "project-descriptions",
+        "sop-materials",
+        "personal-statement",
+        "research-interest",
+        "professor-email",
+        "scholarship-materials",
+        "linkedin-summary",
+        "github-profile",
+        "website-content",
+        "interview-answers",
+        "recommender-brief",
+        "programme-fit"
+      ],
+      "allowed_temporal_modes": [
+        "past",
+        "present",
+        "neutral"
+      ],
+      "category": "integration",
+      "claim_id": "programme-e8-integration",
+      "limitation": "Six demonstration cases.",
+      "project_id": "ecoquant",
+      "source_ids": [
+        "ecoquant-dossier",
+        "e8-integration"
+      ],
+      "state": "experimentally-supported",
+      "text": "Replacing the prompt-only honesty score with the evidence pipeline raised citation validity to full coverage and routed most cases to review; the AI/non-AI boundary holds \u2014 AI produces attestation, confidence, and review status, never a spread."
     }
   ],
   "locked_absent_entities": {
@@ -1302,6 +1566,78 @@
       "sha256": "de2b91974424e847fa1f6a4a66dbbf24db59180ebda5f17652993b1b547ec2c4",
       "source_id": "public-research-profile",
       "verified_on": "2026-07-24",
+      "volatile": false
+    },
+    {
+      "kind": "tagged-repository",
+      "locator": "https://github.com/ElianChyndale/EcoQuant-Financial-Intelligence/blob/main/research/reports/RESEARCH_PROGRAMME_OVERVIEW.md",
+      "note": "E0-E8 research programme overview (committed on main).",
+      "sha256": "1f24cd155e0886b3366499eaf6823ab3f458ea5947bad593c309430115023488",
+      "source_id": "programme-overview",
+      "verified_on": "2026-08-06",
+      "volatile": false
+    },
+    {
+      "kind": "tagged-repository",
+      "locator": "https://github.com/ElianChyndale/EcoQuant-Financial-Intelligence/blob/main/research/results/e1_retrieval_summary.json",
+      "note": "E1 retrieval baselines over FinanceBench.",
+      "sha256": "4f018f443a4eb6386e363ce8aed3d2159a1cf4d7102b1eaeceb33764308e9490",
+      "source_id": "e1-retrieval",
+      "verified_on": "2026-08-06",
+      "volatile": false
+    },
+    {
+      "kind": "tagged-repository",
+      "locator": "https://github.com/ElianChyndale/EcoQuant-Financial-Intelligence/blob/main/research/results/e2_table_summary.json",
+      "note": "E2 table reasoning over GRI-QA quant.",
+      "sha256": "118d65165b8aa21d010e8334ab899e346a065397358d2cb0bc3e36cd1ed0d5fe",
+      "source_id": "e2-table",
+      "verified_on": "2026-08-06",
+      "volatile": false
+    },
+    {
+      "kind": "tagged-repository",
+      "locator": "https://github.com/ElianChyndale/EcoQuant-Financial-Intelligence/blob/main/research/results/e3_temporal_summary.json",
+      "note": "E3 temporal contradiction over SEC XBRL.",
+      "sha256": "b10070dae5377676144916fbd66d00e80a09ce44500f8f82a6b7e75a8b31f30f",
+      "source_id": "e3-temporal",
+      "verified_on": "2026-08-06",
+      "volatile": false
+    },
+    {
+      "kind": "tagged-repository",
+      "locator": "https://github.com/ElianChyndale/EcoQuant-Financial-Intelligence/blob/main/research/results/e4_verification_summary.json",
+      "note": "E4 evidence verification.",
+      "sha256": "7432bc6a6d648a61e1613dde92e7174014af72430ee3c2f0bb0b34a4f6aad457",
+      "source_id": "e4-verification",
+      "verified_on": "2026-08-06",
+      "volatile": false
+    },
+    {
+      "kind": "tagged-repository",
+      "locator": "https://github.com/ElianChyndale/EcoQuant-Financial-Intelligence/blob/main/research/results/e5_calibration_summary.json",
+      "note": "E5 calibration and selective prediction.",
+      "sha256": "16424ea27daa4bb091a0faf96f2dc36b4af39214932a2bafe34406f2ce3b202d",
+      "source_id": "e5-calibration",
+      "verified_on": "2026-08-06",
+      "volatile": false
+    },
+    {
+      "kind": "tagged-repository",
+      "locator": "https://github.com/ElianChyndale/EcoQuant-Financial-Intelligence/blob/main/research/results/e7_commercial_summary.json",
+      "note": "E7 cross-domain commercial analysis.",
+      "sha256": "4042d31129ff7584e9bc7cb8bc726e49baf5ebdc81d749f3b77e633ece2be7f7",
+      "source_id": "e7-commercial",
+      "verified_on": "2026-08-06",
+      "volatile": false
+    },
+    {
+      "kind": "tagged-repository",
+      "locator": "https://github.com/ElianChyndale/EcoQuant-Financial-Intelligence/blob/main/research/results/e8_integration_summary.json",
+      "note": "E8 EcoQuant integration comparison.",
+      "sha256": "2a17306150e7daad328a746bba9f8285c45d35be0346a96f440735726dc6dd3c",
+      "source_id": "e8-integration",
+      "verified_on": "2026-08-06",
       "volatile": false
     }
   ]

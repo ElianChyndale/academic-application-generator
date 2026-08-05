@@ -108,5 +108,40 @@
     "claim_id": "profile-technical-scope",
     "state": "profile-fact",
     "uses": 7
+  },
+  {
+    "claim_id": "programme-e1-retrieval",
+    "state": "experimentally-supported",
+    "uses": 6
+  },
+  {
+    "claim_id": "programme-e2-table",
+    "state": "experimentally-supported",
+    "uses": 6
+  },
+  {
+    "claim_id": "programme-e3-temporal",
+    "state": "experimentally-supported",
+    "uses": 6
+  },
+  {
+    "claim_id": "programme-e4-verification",
+    "state": "experimentally-supported",
+    "uses": 6
+  },
+  {
+    "claim_id": "programme-e5-calibration",
+    "state": "experimentally-supported",
+    "uses": 6
+  },
+  {
+    "claim_id": "programme-e7-commercial",
+    "state": "experimentally-supported",
+    "uses": 6
+  },
+  {
+    "claim_id": "programme-research-question",
+    "state": "experimentally-supported",
+    "uses": 18
   }
 ]
